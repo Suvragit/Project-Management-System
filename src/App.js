@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
 import Login from './Component/Login';
-import { BrowserRouter,Route,Routes } from 'react-router-dom';
-import MainContainer from './Component/MainContainer';
-import React from 'react';
 import LandingPage from './Component/LandingPage';
+import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import { Router } from 'react-router-dom';
+import Head from './Component/Head';
+import SettingsPage from './Component/SettingsPage';
 
-function App() {
+
+function App(){
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<LandingPage/>}/>
           <Route path='/login' element={<Login/>}/>
-          <Route path='/main' element={<MainContainer/>}/>
+          <Route path='/Home' element={<Head/>}/>
+          <Route path='/Home/Settings' element={<SettingsPage/>}/>
         </Routes>
       </BrowserRouter>
     </div>
-  );
+  )
 }
 
 export default App;
