@@ -1,5 +1,6 @@
 import React from "react";
 import OptiAssign from '../Assets/OptiAssign.png'; 
+import { Link } from "react-router-dom";
 export default function Login(){
     return(
         <div>
@@ -16,7 +17,9 @@ export default function Login(){
                 </select>
                 <input className="mx-10 mb-10 py-1 rounded-md w-[290px] pl-3 border-2 border-orange-400 " type="email" placeholder="Email"/>
                 <input className="mx-10 mb-10 py-1 rounded-md w-[290px] pl-3 border-2 border-orange-400 "  type="password" placeholder="Password" />
+                <Link to="/main">
                 <button className=" bg-lime-500 w-[100px] mt-4 mx-20 rounded-md py-1 border border-black hover:bg-lime-600" type="submit"  >Login</button>
+                </Link>
             </form>
         </div>
         </div>
