@@ -11,15 +11,6 @@
             "skills":["C","Python","C++","SQL"],
             "ongoing project":[],
             "completed project":[
-                {
-      "Project Name": "Sentine AI",
-      "Project Info": "Smart Cyber Defense System",
-      "Skills Required": "AI, ML, Python, Frontend or Backend",
-      "Project Coordinator": "Ankush",
-      "Members": 4,
-      "Project Duration": "6 months",
-      "Project Credit": 25
-    },
   {
     "Project Name": "EduHub LMS",
     "Project Info": "Learning Management System for students and teachers",
