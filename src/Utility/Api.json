@@ -1,0 +1,78 @@
+{
+    "Employee":[
+        {
+            "id":1,
+            "email": "shreyan1gmail.com",
+            "phone": "768987366",
+            "username": "Shreyan",
+            "password": "shreyan1",
+            "name":"Shreyan",
+            "image":"https://dummyjson.com/icon/sophiab/128",
+            "skills":["C","Python","C++","SQL"],
+            "ongoing project":[],
+            "completed project":[]
+        },
+        {
+            "id":2,
+            "email": "suvrajit1@gmailcom",
+            "phone": "968987366",
+            "username": "Suvrajit",
+            "password": "suvra1",
+            "name":"Suvrajit",
+            "image":"https://dummyjson.com/icon/michaelw/128",
+            "skills":["C","Python","SQL"],
+            "ongoing project":[],
+            "completed project":[]
+        },
+        {
+            "id":3,
+            "email": "tirthendu1gmail.com",
+            "phone": "908987365",
+            "username": "Tirthendu",
+            "password": "tirthendu1",
+            "name":"Tirthendu",
+            "image":"https://dummyjson.com/icon/jamesd/128",
+            "skills":["C","Python","Reactjs", "SQL"],
+            "ongoing project":[],
+            "completed project":[]
+        },
+        {
+            "id":4,
+            "email": "sutirtha1gmail.com",
+            "phone": "902545619",
+            "username": "Sutirtha",
+            "password": "sutirtha1",
+            "name":"Sutirtha",
+            "image":"https://dummyjson.com/icon/jamesd/128",
+            "skills":["C","Python","JAVA", "SQL"],
+            "ongoing project":[],
+            "completed project":[]
+        }
+    ],
+    "Admin":[
+        {
+            "id":"A1",
+            "email": "sourav1gmail.com",
+            "phone": "98724366",
+            "username": "Sourav",
+            "password": "sourav1",
+            "name":"Sourav",
+            "image":"https://dummyjson.com/icon/oliviaw/128",
+            "skills":["C","Python","C++","SQL","Reactjs","Nodejs"],
+            "ongoing project":[],
+            "completed project":[]
+        },
+        {
+            "id":"A2",
+            "email": "ankush1gmail.com",
+            "phone": "748987366",
+            "username": "Ankush",
+            "password": "Ankush1",
+            "name":"Ankush",
+            "image":"https://dummyjson.com/icon/alexanderj/128",
+            "skills":["C","Python","SQL","Nodejs","JAVA"],
+            "ongoing project":[],
+            "completed project":[]
+        }
+    ]
+}

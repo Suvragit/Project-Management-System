@@ -1,0 +1,34 @@
+{
+    "upcoming project":[
+        {
+            "project name":"onlineportfolio",
+            "project info": "A portfolio page of your own",
+            "Skills required":"HTML, CSS, ReactJS, MongoDB",
+            "project coordinator":"Ankush",
+            "members required":"3-4",
+            "project duration":"6 months",
+            "deadline to join":"01.08.2025",
+            "project credit": 25
+        },
+        {
+            "project name":"Healthy meter",
+            "project info":"A virtual health meter that scales one’s health on their different health reports",
+            "Skills required":"Machine Learning,Python, Frontend OR Backend",
+            "project coordinator":"Sourav",
+            "members required":"4-5",
+            "project duration":"6 months",
+            "deadline to join":"01.08.2025",
+            "project credit": 25
+        },
+        {
+            "project name":"Weapon Detection System ",
+            "project info": "A smart weapon detection system using Machine Learning for public safety",
+            "Skills required":"Python, Machine Learning, React JS,Frontend OR Backend",
+            "project coordinator":"Ankush",
+            "members required":"3-4",
+            "project duration":"9 months",
+            "deadline to join":"25.10.2025",
+            "project credit": 25
+        }
+    ]
+}
