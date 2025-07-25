@@ -14,7 +14,7 @@
                 "Project Name": "Task Flick",
                 "Project Info": "A  daily task tracker with habit-building and streak analytics.",
                 "Skills Required": "React, Node.js, MongoDB",
-                 "Project Coordinator": "Virat",
+                 "Project Coordinator": "Sourav",
                  "Members": 5,
                  "Project Duration": "5 months",
                  "Project Credit": 25
@@ -23,7 +23,7 @@
                 "Project Name": "MeetMate",
                 "Project Info": "Meeting Scheduler with Time-Zone Awareness",
                 "Skills Required": "React, Node.js, MongoDB,Python",
-                 "Project Coordinator": "Rohit",
+                 "Project Coordinator": "Sourav",
                  "Members": 4,
                  "Project Duration": "2 months",
                  "Project Credit": 15
@@ -32,7 +32,7 @@
                 "Project Name": "DevConnect",
                 "Project Info": "Portfolio + Collaboration Hub for Developers.",
                 "Skills Required": "React, Node.js",
-                 "Project Coordinator": "Shikhar",
+                 "Project Coordinator": "Ankush",
                  "Members": 4,
                  "Project Duration": "2 months",
                  "Project Credit": 10
@@ -73,7 +73,7 @@
                 "Project Name": "VoteRight",
                 "Project Info": "Secure Online Voting System",
                 "Skills Required": "AI, ML,Frontend or Backend",
-                "Project Coordinator": "Piyush",
+                "Project Coordinator": "Sourav",
                 "Members": 4,
                 "Project Duration": "5 months",
                 "Project Credit": 25
@@ -82,7 +82,7 @@
                 "Project Name": "Forumly",
                 "Project Info": "Lightweight Q&A Forum Platform (like Stack Overflow)",
                 "Skills Required": "Frontend or Backend",
-                "Project Coordinator": "Pankaj",
+                "Project Coordinator": "Ankush",
                 "Members": 4,
                 "Project Duration": "5 months",
                 "Project Credit": 25
@@ -133,7 +133,7 @@
                  "Project Name": "MindMatch ",
                 "Project Info": "AI-Powered Resume Matcher",
                 "Skills Required": "AI, ML,Frontend or Backend,GenAI",
-                "Project Coordinator": "Subhash",
+                "Project Coordinator": "Sourav",
                 "Members": 4,
                 "Project Duration": "5 months",
                 "Project Credit": 25
@@ -142,7 +142,7 @@
                  "Project Name": "TrackEZ ",
                 "Project Info": "Simple Expense and Budget Tracker",
                 "Skills Required": "ReactJS or MongoDB,API",
-                "Project Coordinator": "Subhashish",
+                "Project Coordinator": "Ankush",
                 "Members": 4,
                 "Project Duration": "2 months",
                 "Project Credit": 15
@@ -185,7 +185,7 @@
                  "Project Name": "CovidScope ",
                 "Project Info": " Interactive Covid-19 Data Dashboard",
                 "Skills Required": "ReactJS or MongoDB,API",
-                "Project Coordinator": "Sunil",
+                "Project Coordinator": "Sourav",
                 "Members": 4,
                 "Project Duration": "2 months",
                 "Project Credit": 15
@@ -194,7 +194,7 @@
                  "Project Name": "ZenoBoard ",
                 "Project Info": " Real-Time IoT Sensor Data Visualizer",
                 "Skills Required": "ReactJS or MongoDB,API or IOT,Microprocessor and Microcontroller",
-                "Project Coordinator": "Ravi",
+                "Project Coordinator": "Ankush",
                 "Members": 4,
                 "Project Duration": "3 months",
                 "Project Credit": 20
@@ -235,24 +235,51 @@
             "image":"https://dummyjson.com/icon/oliviaw/128",
             "skills":["C","Python","C++","SQL","Reactjs","Nodejs"],
             "ongoing project":[
+                 {
+                "Project Name": "Task Flick",
+                "Project Info": "A  daily task tracker with habit-building and streak analytics.",
+                "Skills Required": "React, Node.js, MongoDB",
+                 "Project Coordinator": "Sourav",
+                 "Members": 5,
+                 "Project Duration": "5 months",
+                 "Project Credit": 25
+              },
                {
-                 "Project Name": "InSight ",
-                "Project Info": " Image Caption Generator using Deep Learning",
-                "Skills Required": "ReactJS or MongoDB,API,AI,ML,GenAI,DeepLearning",
+                "Project Name": "MeetMate",
+                "Project Info": "Meeting Scheduler with Time-Zone Awareness",
+                "Skills Required": "React, Node.js, MongoDB,Python",
+                 "Project Coordinator": "Sourav",
+                 "Members": 4,
+                 "Project Duration": "2 months",
+                 "Project Credit": 15
+              },
+              {
+                "Project Name": "VoteRight",
+                "Project Info": "Secure Online Voting System",
+                "Skills Required": "AI, ML,Frontend or Backend",
                 "Project Coordinator": "Sourav",
                 "Members": 4,
                 "Project Duration": "5 months",
                 "Project Credit": 25
-               },
-               {
-                 "Project Name": "Sentimently ",
-                "Project Info": " Twitter Sentiment Analyzer",
-                "Skills Required": "ReactJS or MongoDB,API,AI,ML,GenAI,DeepLearning",
+              },
+              {
+                 "Project Name": "MindMatch ",
+                "Project Info": "AI-Powered Resume Matcher",
+                "Skills Required": "AI, ML,Frontend or Backend,GenAI",
                 "Project Coordinator": "Sourav",
                 "Members": 4,
                 "Project Duration": "5 months",
                 "Project Credit": 25
-               }
+              },
+                {
+                 "Project Name": "CovidScope ",
+                "Project Info": " Interactive Covid-19 Data Dashboard",
+                "Skills Required": "ReactJS or MongoDB,API",
+                "Project Coordinator": "Sourav",
+                "Members": 4,
+                "Project Duration": "2 months",
+                "Project Credit": 15
+              }
             ],
             "completed project":[
                 {
@@ -286,14 +313,42 @@
             "skills":["C","Python","SQL","Nodejs","JAVA"],
             "ongoing project":[
               {
-                 "Project Name": "TimeTide ",
-                "Project Info": "  AI-Powered Time Management Dashboard",
-                "Skills Required": "ReactJS or MongoDB,API or AI,ML,GenAI,DeepLearning",
+                "Project Name": "DevConnect",
+                "Project Info": "Portfolio + Collaboration Hub for Developers.",
+                "Skills Required": "React, Node.js",
+                 "Project Coordinator": "Ankush",
+                 "Members": 4,
+                 "Project Duration": "2 months",
+                 "Project Credit": 10
+              },
+               {
+                "Project Name": "Forumly",
+                "Project Info": "Lightweight Q&A Forum Platform (like Stack Overflow)",
+                "Skills Required": "Frontend or Backend",
                 "Project Coordinator": "Ankush",
                 "Members": 4,
                 "Project Duration": "5 months",
                 "Project Credit": 25
-               }
+              },
+              {
+                 "Project Name": "TrackEZ ",
+                "Project Info": "Simple Expense and Budget Tracker",
+                "Skills Required": "ReactJS or MongoDB,API",
+                "Project Coordinator": "Ankush",
+                "Members": 4,
+                "Project Duration": "2 months",
+                "Project Credit": 15
+              },
+              {
+                 "Project Name": "ZenoBoard ",
+                "Project Info": " Real-Time IoT Sensor Data Visualizer",
+                "Skills Required": "ReactJS or MongoDB,API or IOT,Microprocessor and Microcontroller",
+                "Project Coordinator": "Ankush",
+                "Members": 4,
+                "Project Duration": "3 months",
+                "Project Credit": 20
+              }
+
             ],
             "completed project":[
                 {
