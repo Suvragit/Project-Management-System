@@ -9,7 +9,35 @@
             "name":"Shreyan",
             "image":"https://dummyjson.com/icon/sophiab/128",
             "skills":["C","Python","C++","SQL"],
-            "ongoing project":[],
+            "ongoing project":[
+              {
+                "Project Name": "Task Flick",
+                "Project Info": "A  daily task tracker with habit-building and streak analytics.",
+                "Skills Required": "React, Node.js, MongoDB",
+                 "Project Coordinator": "Sourav",
+                 "Members": 5,
+                 "Project Duration": "5 months",
+                 "Project Credit": 25
+              },
+              {
+                "Project Name": "MeetMate",
+                "Project Info": "Meeting Scheduler with Time-Zone Awareness",
+                "Skills Required": "React, Node.js, MongoDB,Python",
+                 "Project Coordinator": "Sourav",
+                 "Members": 4,
+                 "Project Duration": "2 months",
+                 "Project Credit": 15
+              },
+              {
+                "Project Name": "DevConnect",
+                "Project Info": "Portfolio + Collaboration Hub for Developers.",
+                "Skills Required": "React, Node.js",
+                 "Project Coordinator": "Ankush",
+                 "Members": 4,
+                 "Project Duration": "2 months",
+                 "Project Credit": 10
+              }
+            ],
             "completed project":[
   {
     "Project Name": "EduHub LMS",
@@ -40,7 +68,27 @@
             "name":"Suvrajit",
             "image":"https://dummyjson.com/icon/michaelw/128",
             "skills":["C","Python","SQL"],
-            "ongoing project":[],
+            "ongoing project":[
+              {
+                "Project Name": "VoteRight",
+                "Project Info": "Secure Online Voting System",
+                "Skills Required": "AI, ML,Frontend or Backend",
+                "Project Coordinator": "Sourav",
+                "Members": 4,
+                "Project Duration": "5 months",
+                "Project Credit": 25
+              },
+              {
+                "Project Name": "Forumly",
+                "Project Info": "Lightweight Q&A Forum Platform (like Stack Overflow)",
+                "Skills Required": "Frontend or Backend",
+                "Project Coordinator": "Ankush",
+                "Members": 4,
+                "Project Duration": "5 months",
+                "Project Credit": 25
+              }
+
+            ],
             "completed project":[
                 {
       "Project Name": "Sentine AI",
@@ -80,7 +128,27 @@
             "name":"Tirthendu",
             "image":"https://dummyjson.com/icon/jamesd/128",
             "skills":["C","Python","Reactjs", "SQL"],
-            "ongoing project":[],
+            "ongoing project":[
+              {
+                 "Project Name": "MindMatch ",
+                "Project Info": "AI-Powered Resume Matcher",
+                "Skills Required": "AI, ML,Frontend or Backend,GenAI",
+                "Project Coordinator": "Sourav",
+                "Members": 4,
+                "Project Duration": "5 months",
+                "Project Credit": 25
+              },
+              {
+                 "Project Name": "TrackEZ ",
+                "Project Info": "Simple Expense and Budget Tracker",
+                "Skills Required": "ReactJS or MongoDB,API",
+                "Project Coordinator": "Ankush",
+                "Members": 4,
+                "Project Duration": "2 months",
+                "Project Credit": 15
+              }
+
+            ],
             "completed project":[
                 {
     "Project Name": "EduHub LMS",
@@ -111,7 +179,29 @@
             "name":"Sutirtha",
             "image":"https://dummyjson.com/icon/jamesd/128",
             "skills":["C","Python","JAVA", "SQL"],
-            "ongoing project":[],
+            "ongoing project":[
+              
+                 {
+                 "Project Name": "CovidScope ",
+                "Project Info": " Interactive Covid-19 Data Dashboard",
+                "Skills Required": "ReactJS or MongoDB,API",
+                "Project Coordinator": "Sourav",
+                "Members": 4,
+                "Project Duration": "2 months",
+                "Project Credit": 15
+              },
+               {
+                 "Project Name": "ZenoBoard ",
+                "Project Info": " Real-Time IoT Sensor Data Visualizer",
+                "Skills Required": "ReactJS or MongoDB,API or IOT,Microprocessor and Microcontroller",
+                "Project Coordinator": "Ankush",
+                "Members": 4,
+                "Project Duration": "3 months",
+                "Project Credit": 20
+              }
+
+              
+            ],
             "completed project":[
                 {
       "Project Name": "Sentine AI",
@@ -144,7 +234,53 @@
             "name":"Sourav",
             "image":"https://dummyjson.com/icon/oliviaw/128",
             "skills":["C","Python","C++","SQL","Reactjs","Nodejs"],
-            "ongoing project":[],
+            "ongoing project":[
+                 {
+                "Project Name": "Task Flick",
+                "Project Info": "A  daily task tracker with habit-building and streak analytics.",
+                "Skills Required": "React, Node.js, MongoDB",
+                 "Project Coordinator": "Sourav",
+                 "Members": 5,
+                 "Project Duration": "5 months",
+                 "Project Credit": 25
+              },
+               {
+                "Project Name": "MeetMate",
+                "Project Info": "Meeting Scheduler with Time-Zone Awareness",
+                "Skills Required": "React, Node.js, MongoDB,Python",
+                 "Project Coordinator": "Sourav",
+                 "Members": 4,
+                 "Project Duration": "2 months",
+                 "Project Credit": 15
+              },
+              {
+                "Project Name": "VoteRight",
+                "Project Info": "Secure Online Voting System",
+                "Skills Required": "AI, ML,Frontend or Backend",
+                "Project Coordinator": "Sourav",
+                "Members": 4,
+                "Project Duration": "5 months",
+                "Project Credit": 25
+              },
+              {
+                 "Project Name": "MindMatch ",
+                "Project Info": "AI-Powered Resume Matcher",
+                "Skills Required": "AI, ML,Frontend or Backend,GenAI",
+                "Project Coordinator": "Sourav",
+                "Members": 4,
+                "Project Duration": "5 months",
+                "Project Credit": 25
+              },
+                {
+                 "Project Name": "CovidScope ",
+                "Project Info": " Interactive Covid-19 Data Dashboard",
+                "Skills Required": "ReactJS or MongoDB,API",
+                "Project Coordinator": "Sourav",
+                "Members": 4,
+                "Project Duration": "2 months",
+                "Project Credit": 15
+              }
+            ],
             "completed project":[
                 {
     "Project Name": "EduHub LMS",
@@ -175,7 +311,45 @@
             "name":"Ankush",
             "image":"https://dummyjson.com/icon/alexanderj/128",
             "skills":["C","Python","SQL","Nodejs","JAVA"],
-            "ongoing project":[],
+            "ongoing project":[
+              {
+                "Project Name": "DevConnect",
+                "Project Info": "Portfolio + Collaboration Hub for Developers.",
+                "Skills Required": "React, Node.js",
+                 "Project Coordinator": "Ankush",
+                 "Members": 4,
+                 "Project Duration": "2 months",
+                 "Project Credit": 10
+              },
+               {
+                "Project Name": "Forumly",
+                "Project Info": "Lightweight Q&A Forum Platform (like Stack Overflow)",
+                "Skills Required": "Frontend or Backend",
+                "Project Coordinator": "Ankush",
+                "Members": 4,
+                "Project Duration": "5 months",
+                "Project Credit": 25
+              },
+              {
+                 "Project Name": "TrackEZ ",
+                "Project Info": "Simple Expense and Budget Tracker",
+                "Skills Required": "ReactJS or MongoDB,API",
+                "Project Coordinator": "Ankush",
+                "Members": 4,
+                "Project Duration": "2 months",
+                "Project Credit": 15
+              },
+              {
+                 "Project Name": "ZenoBoard ",
+                "Project Info": " Real-Time IoT Sensor Data Visualizer",
+                "Skills Required": "ReactJS or MongoDB,API or IOT,Microprocessor and Microcontroller",
+                "Project Coordinator": "Ankush",
+                "Members": 4,
+                "Project Duration": "3 months",
+                "Project Credit": 20
+              }
+
+            ],
             "completed project":[
                 {
       "Project Name": "Sentine AI",
