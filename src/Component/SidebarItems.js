@@ -37,19 +37,19 @@ const SidebarItems = () => {
     <div className="space-y-6 p-4">
       {menuItems.map((section, index) => (
         <div key={index}>
-          <h3 className="text-sm font-bold uppercase tracking-wider mb-3 text-gray-500">
+          <h3 className="text-sm font-bold uppercase tracking-wider mb-3 text-black">
             {section.title}
           </h3>
           <ul className="space-y-2">
             {section.items.map((item, idx) => (
               <li 
-                key={idx}
-                onClick={() => handleItemClick(item.path)}
-                className="px-3 py-2 rounded-lg hover:bg-primary-100 text-gray-700 hover:text-primary-800 
-                          font-medium cursor-pointer transition-colors duration-200 active:bg-primary-200"
-              >
-                {item.name}
-              </li>
+              key={idx}
+              onClick={() => handleItemClick(item.path)}
+              className="px-3 py-2 rounded-lg hover:bg-[#D1ECF1] text-[#5A9CA0] hover:text-[black] 
+                        font-medium cursor-pointer"
+            >
+              {item.name}
+            </li>
             ))}
           </ul>
         </div>
