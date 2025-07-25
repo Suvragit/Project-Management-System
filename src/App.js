@@ -1,25 +1,34 @@
 import './App.css';
 import Login from './Component/Login';
 import LandingPage from './Component/LandingPage';
-import { BrowserRouter,Route,Routes } from 'react-router-dom';
-import { Router } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Head from './Component/Head';
 import SettingsPage from './Component/SettingsPage';
+import MainContainer from './Component/MainContainer';
 
-
-function App(){
+function App() {
   return (
-    <div>
+    <div className="h-screen">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<LandingPage/>}/>
-          <Route path='/login' element={<Login/>}/>
-          <Route path='/Home' element={<Head/>}/>
-          <Route path='/Home/Settings' element={<SettingsPage/>}/>
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/Home' element={
+            <div className="flex flex-col h-full">
+              <Head />
+              <MainContainer />
+            </div>
+          } />
+          <Route path='/Home/Settings' element={
+            <div className="flex flex-col h-full">
+              <Head />
+              <SettingsPage />
+            </div>
+          } />
         </Routes>
       </BrowserRouter>
     </div>
-  )
+  );
 }
 
 export default App;
