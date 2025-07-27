@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Head from './Component/Head';
 import SettingsPage from './Component/SettingsPage';
 import MainContainer from './Component/MainContainer';
+import CompletedPage from './Component/CompletedPage';
+
 
 function App() {
   return (
@@ -25,6 +27,9 @@ function App() {
               <SettingsPage />
             </div>
           } />
+          <Route path='/completed' element=<div className="flex flex-col h-full">
+              <CompletedPage />
+            </div> />
         </Routes>
       </BrowserRouter>
     </div>
