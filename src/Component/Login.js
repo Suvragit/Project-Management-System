@@ -1,6 +1,8 @@
 import OptiAssign from '../Assets/OptiAssign.png'; 
 import { Link } from "react-router-dom";
-export default function Login(){
+import React,{useState} from 'react';
+
+const Login =() =>{
     return(
         <div>
         <img src ={OptiAssign} className="w-72 h-72 mx-auto -mt-16 -mb-7" />
@@ -24,4 +26,5 @@ export default function Login(){
         </div>
         
     )
-}
+};
+export default Login;
