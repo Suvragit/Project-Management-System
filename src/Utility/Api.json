@@ -39,24 +39,24 @@
               }
             ],
             "completed project":[
-  {
-    "Project Name": "EduHub LMS",
-    "Project Info": "Learning Management System for students and teachers",
-    "Skills Required": "React, Node.js, MongoDB",
-    "Project Coordinator": "Sourav",
-    "Members": 5,
-    "Project Duration": "4 months",
-    "Project Credit": 20
-  },
-  {
-    "Project Name": "EventEase",
-    "Project Info": "Event scheduling and ticket booking platform",
-    "Skills Required": "Angular, Express.js, MySQL",
-    "Project Coordinator": "Ankush",
-    "Members": 6,
-    "Project Duration": "6 months",
-    "Project Credit": 28
-  }
+              {
+                "Project Name": "EduHub LMS",
+                "Project Info": "Learning Management System for students and teachers",
+                "Skills Required": "React, Node.js, MongoDB",
+                "Project Coordinator": "Sourav",
+                "Members": 5,
+                "Project Duration": "4 months",
+                "Project Credit": 20
+              },
+              {
+                "Project Name": "EventEase",
+                "Project Info": "Event scheduling and ticket booking platform",
+                "Skills Required": "Angular, Express.js, MySQL",
+                "Project Coordinator": "Ankush",
+                "Members": 6,
+                "Project Duration": "6 months",
+                "Project Credit": 28
+              }
             ]
         },
         {
@@ -90,33 +90,33 @@
 
             ],
             "completed project":[
-                {
-      "Project Name": "Sentine AI",
-      "Project Info": "Smart Cyber Defense System",
-      "Skills Required": "AI, ML, Python, Frontend or Backend",
-      "Project Coordinator": "Ankush",
-      "Members": 4,
-      "Project Duration": "6 months",
-      "Project Credit": 25
-    },
-    {
-    "Project Name": "MediTrack",
-    "Project Info": "Healthcare monitoring web app for clinics",
-    "Skills Required": "Django, PostgreSQL, HTML, CSS",
-    "Project Coordinator": "Sourav",
-    "Members": 3,
-    "Project Duration": "5 months",
-    "Project Credit": 18
-  },
-  {
-    "Project Name": "FinVista",
-    "Project Info": "Personal finance tracker and budgeting tool",
-    "Skills Required": "Flutter, Firebase, Dart",
-    "Project Coordinator": "Ankush",
-    "Members": 4,
-    "Project Duration": "3 months",
-    "Project Credit": 15
-  }
+              {
+                "Project Name": "Sentine AI",
+                "Project Info": "Smart Cyber Defense System",
+                "Skills Required": "AI, ML, Python, Frontend or Backend",
+                "Project Coordinator": "Ankush",
+                "Members": 4,
+                "Project Duration": "6 months",
+                "Project Credit": 25
+              },
+              {
+                "Project Name": "MediTrack",
+                "Project Info": "Healthcare monitoring web app for clinics",
+                "Skills Required": "Django, PostgreSQL, HTML, CSS",
+                "Project Coordinator": "Sourav",
+                "Members": 3,
+                "Project Duration": "5 months",
+                "Project Credit": 18
+              },
+              {
+                "Project Name": "FinVista",
+                "Project Info": "Personal finance tracker and budgeting tool",
+                "Skills Required": "Flutter, Firebase, Dart",
+                "Project Coordinator": "Ankush",
+                "Members": 4,
+                "Project Duration": "3 months",
+                "Project Credit": 15
+              }
             ]
         },
         {
@@ -150,24 +150,24 @@
 
             ],
             "completed project":[
-                {
-    "Project Name": "EduHub LMS",
-    "Project Info": "Learning Management System for students and teachers",
-    "Skills Required": "React, Node.js, MongoDB",
-    "Project Coordinator": "Sourav",
-    "Members": 5,
-    "Project Duration": "4 months",
-    "Project Credit": 20
-  },
-  {
-    "Project Name": "EventEase",
-    "Project Info": "Event scheduling and ticket booking platform",
-    "Skills Required": "Angular, Express.js, MySQL",
-    "Project Coordinator": "Ankush",
-    "Members": 6,
-    "Project Duration": "6 months",
-    "Project Credit": 28
-  }
+              {
+                "Project Name": "EduHub LMS",
+                "Project Info": "Learning Management System for students and teachers",
+                "Skills Required": "React, Node.js, MongoDB",
+                "Project Coordinator": "Sourav",
+                "Members": 5,
+                "Project Duration": "4 months",
+                "Project Credit": 20
+              },
+              {
+                "Project Name": "EventEase",
+                "Project Info": "Event scheduling and ticket booking platform",
+                "Skills Required": "Angular, Express.js, MySQL",
+                "Project Coordinator": "Ankush",
+                "Members": 6,
+                "Project Duration": "6 months",
+                "Project Credit": 28
+              }
             ]
         },
         {
@@ -203,24 +203,24 @@
               
             ],
             "completed project":[
-                {
-      "Project Name": "Sentine AI",
-      "Project Info": "Smart Cyber Defense System",
-      "Skills Required": "AI, ML, Python, Frontend or Backend",
-      "Project Coordinator": "Ankush",
-      "Members": 4,
-      "Project Duration": "6 months",
-      "Project Credit": 25
-    },
-  {
-    "Project Name": "FinVista",
-    "Project Info": "Personal finance tracker and budgeting tool",
-    "Skills Required": "Flutter, Firebase, Dart",
-    "Project Coordinator": "Ankush",
-    "Members": 4,
-    "Project Duration": "3 months",
-    "Project Credit": 15
-  }
+              {
+                "Project Name": "Sentine AI",
+                "Project Info": "Smart Cyber Defense System",
+                "Skills Required": "AI, ML, Python, Frontend or Backend",
+                "Project Coordinator": "Ankush",
+                "Members": 4,
+                "Project Duration": "6 months",
+                "Project Credit": 25
+              },
+              {
+                "Project Name": "FinVista",
+                "Project Info": "Personal finance tracker and budgeting tool",
+                "Skills Required": "Flutter, Firebase, Dart",
+                "Project Coordinator": "Ankush",
+                "Members": 4,
+                "Project Duration": "3 months",
+                "Project Credit": 15
+              }
             ]
         }
     ],
@@ -283,23 +283,23 @@
             ],
             "completed project":[
                 {
-    "Project Name": "EduHub LMS",
-    "Project Info": "Learning Management System for students and teachers",
-    "Skills Required": "React, Node.js, MongoDB",
-    "Project Coordinator": "Sourav",
-    "Members": 5,
-    "Project Duration": "4 months",
-    "Project Credit": 20
-  },
-  {
-    "Project Name": "MediTrack",
-    "Project Info": "Healthcare monitoring web app for clinics",
-    "Skills Required": "Django, PostgreSQL, HTML, CSS",
-    "Project Coordinator": "Sourav",
-    "Members": 3,
-    "Project Duration": "5 months",
-    "Project Credit": 18
-  }
+                  "Project Name": "EduHub LMS",
+                  "Project Info": "Learning Management System for students and teachers",
+                  "Skills Required": "React, Node.js, MongoDB",
+                  "Project Coordinator": "Sourav",
+                  "Members": 5,
+                  "Project Duration": "4 months",
+                  "Project Credit": 20
+                },
+                {
+                  "Project Name": "MediTrack",
+                  "Project Info": "Healthcare monitoring web app for clinics",
+                  "Skills Required": "Django, PostgreSQL, HTML, CSS",
+                  "Project Coordinator": "Sourav",
+                  "Members": 3,
+                  "Project Duration": "5 months",
+                  "Project Credit": 18
+                }
             ]
         },
         {
@@ -352,32 +352,32 @@
             ],
             "completed project":[
                 {
-      "Project Name": "Sentine AI",
-      "Project Info": "Smart Cyber Defense System",
-      "Skills Required": "AI, ML, Python, Frontend or Backend",
-      "Project Coordinator": "Ankush",
-      "Members": 4,
-      "Project Duration": "6 months",
-      "Project Credit": 25
-    },
-    {
-    "Project Name": "EventEase",
-    "Project Info": "Event scheduling and ticket booking platform",
-    "Skills Required": "Angular, Express.js, MySQL",
-    "Project Coordinator": "Ankush",
-    "Members": 6,
-    "Project Duration": "6 months",
-    "Project Credit": 28
-  },
-  {
-    "Project Name": "FinVista",
-    "Project Info": "Personal finance tracker and budgeting tool",
-    "Skills Required": "Flutter, Firebase, Dart",
-    "Project Coordinator": "Ankush",
-    "Members": 4,
-    "Project Duration": "3 months",
-    "Project Credit": 15
-  }
+                "Project Name": "Sentine AI",
+                "Project Info": "Smart Cyber Defense System",
+                "Skills Required": "AI, ML, Python, Frontend or Backend",
+                "Project Coordinator": "Ankush",
+                "Members": 4,
+                "Project Duration": "6 months",
+                "Project Credit": 25
+                },
+                {
+                "Project Name": "EventEase",
+                "Project Info": "Event scheduling and ticket booking platform",
+                "Skills Required": "Angular, Express.js, MySQL",
+                "Project Coordinator": "Ankush",
+                "Members": 6,
+                "Project Duration": "6 months",
+                "Project Credit": 28
+              },
+              {
+                "Project Name": "FinVista",
+                "Project Info": "Personal finance tracker and budgeting tool",
+                "Skills Required": "Flutter, Firebase, Dart",
+                "Project Coordinator": "Ankush",
+                "Members": 4,
+                "Project Duration": "3 months",
+                "Project Credit": 15
+              }
             ]
         }
     ]
