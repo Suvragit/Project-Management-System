@@ -6,6 +6,8 @@ import Head from './Component/Head';
 import SettingsPage from './Component/SettingsPage';
 import MainContainer from './Component/MainContainer';
 import CompletedPage from './Component/CompletedPage';
+import OngoingPage from './Component/OngoingPage';
+import Sidebar from './Component/Sidebar';
 
 
 function App() {
@@ -27,9 +29,20 @@ function App() {
               <SettingsPage />
             </div>
           } />
-          <Route path='/completed' element=<div className="flex flex-col h-full">
+          <Route path='/completed' element={
+            <div className="flex flex-col h-full">
               <CompletedPage />
-            </div> />
+            </div> 
+          } />
+          <Route path='/ongoing' element={
+            <div className="flex flex-col h-full">
+              <Head />
+               <div className="flex flex-1">
+                  <Sidebar />
+                  <OngoingPage />
+                </div>
+              </div>
+          } />
         </Routes>
       </BrowserRouter>
     </div>
