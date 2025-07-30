@@ -1,4 +1,4 @@
-import Companyicon from '../Assets/logo.png'
+import Companyicon from '../../Assets/logo.png'
 
 
 const CompanyIcon=()=>{

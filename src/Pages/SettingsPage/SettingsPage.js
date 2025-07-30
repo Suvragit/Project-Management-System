@@ -1,5 +1,5 @@
-import Companyicon from '../Assets/logo.png'
-import Profilephoto from '../Assets/profilephoto.jpg'
+import Companyicon from '../../Assets/logo.png'
+import Profilephoto from '../../Assets/profilephoto.jpg'
 
 const SettingsPage=()=>{
     return(

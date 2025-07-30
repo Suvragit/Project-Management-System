@@ -1,4 +1,4 @@
-import Settingsicon from "../Assets/settingsicon.png";
+import Settingsicon from "../../Assets/settingsicon.png";
 import { Link } from "react-router-dom";
 
 const ProfileSettings=()=>{

@@ -1,7 +1,7 @@
-import OptiAssign from '../Assets/OptiAssign.png'; 
+import OptiAssign from '../../Assets/OptiAssign.png'; 
 import { Link, useNavigate } from "react-router-dom";
 import React,{useState} from 'react';
-import jsonData from '../Utility/Api.json'
+import jsonData from '../../Utility/Api.json'
 
 const Login =() =>{
     const[loginType,setloginType]=useState('');
