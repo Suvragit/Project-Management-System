@@ -1,11 +1,12 @@
-{
-    "Employee":[
+
+    [
         {
             "id":1,
-            "email": "shreyan1gmail.com",
+            "email": "shreyan1@gmail.com",
             "phone": "768987366",
             "username": "Shreyan",
             "password": "shreyan1",
+            "role": "Employee",
             "name":"Shreyan",
             "image":"https://dummyjson.com/icon/sophiab/128",
             "skills":["C","Python","C++","SQL"],
@@ -65,6 +66,7 @@
             "phone": "968987366",
             "username": "Suvrajit",
             "password": "suvra1",
+            "role":"Employee",
             "name":"Suvrajit",
             "image":"https://dummyjson.com/icon/michaelw/128",
             "skills":["C","Python","SQL"],
@@ -121,10 +123,11 @@
         },
         {
             "id":3,
-            "email": "tirthendu1gmail.com",
+            "email": "tirthendu1@gmail.com",
             "phone": "908987365",
             "username": "Tirthendu",
             "password": "tirthendu1",
+            "role":"Employee",
             "name":"Tirthendu",
             "image":"https://dummyjson.com/icon/jamesd/128",
             "skills":["C","Python","Reactjs", "SQL"],
@@ -172,10 +175,11 @@
         },
         {
             "id":4,
-            "email": "sutirtha1gmail.com",
+            "email": "sutirtha1@gmail.com",
             "phone": "902545619",
             "username": "Sutirtha",
             "password": "sutirtha1",
+            "role":"Employee",
             "name":"Sutirtha",
             "image":"https://dummyjson.com/icon/jamesd/128",
             "skills":["C","Python","JAVA", "SQL"],
@@ -222,15 +226,15 @@
                 "Project Credit": 15
               }
             ]
-        }
-    ],
-    "Admin":[
+        },
+  
         {
             "id":"A1",
-            "email": "sourav1gmail.com",
+            "email": "sourav@gmail.com",
             "phone": "98724366",
             "username": "Sourav",
             "password": "sourav1",
+            "role":"Admin",
             "name":"Sourav",
             "image":"https://dummyjson.com/icon/oliviaw/128",
             "skills":["C","Python","C++","SQL","Reactjs","Nodejs"],
@@ -304,10 +308,11 @@
         },
         {
             "id":"A2",
-            "email": "ankush1gmail.com",
+            "email": "ankush1@gmail.com",
             "phone": "748987366",
             "username": "Ankush",
             "password": "Ankush1",
+            "role":"Admin",
             "name":"Ankush",
             "image":"https://dummyjson.com/icon/alexanderj/128",
             "skills":["C","Python","SQL","Nodejs","JAVA"],
@@ -380,5 +385,4 @@
               }
             ]
         }
-    ]
-}
+  ]
