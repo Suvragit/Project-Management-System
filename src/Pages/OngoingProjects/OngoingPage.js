@@ -1,4 +1,4 @@
-import jsonData from '../Utility/Api.json';
+import jsonData from '../../Utility/Api.json';
 import React, { useEffect, useState } from 'react';
 
 const OngoingPage=()=>{

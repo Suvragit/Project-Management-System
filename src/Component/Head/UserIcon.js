@@ -1,4 +1,4 @@
-import Profilephoto from '../Assets/profilephoto.jpg';
+import Profilephoto from '../../Assets/profilephoto.jpg';
 
 const UserIcon = () => {
     return(

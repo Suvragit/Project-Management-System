@@ -1,12 +1,12 @@
 import './App.css';
-import Login from './Component/Login';
-import LandingPage from './Component/LandingPage';
+import Login from './Pages/LoginPage/Login';
+import LandingPage from './Pages/LandingPage/LandingPage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Head from './Component/Head';
-import SettingsPage from './Component/SettingsPage';
+import Head from './Component/Head/Head';
+import SettingsPage from './Pages/SettingsPage/SettingsPage';
 import MainContainer from './Component/MainContainer';
-import CompletedPage from './Component/CompletedPage';
-import OngoingPage from './Component/OngoingPage';
+import CompletedPage from './Pages/CompletedProjects/CompletedPage';
+import OngoingPage from './Pages/OngoingProjects/OngoingPage';
 import Sidebar from './Component/Sidebar';
 
 

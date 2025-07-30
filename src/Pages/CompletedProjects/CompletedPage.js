@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Head from './Head';
-import Sidebar from './Sidebar';
-import jsonData from '../Utility/Api.json';
+import Head from '../../Component/Head/Head';
+import Sidebar from '../../Component/Sidebar';
+import jsonData from '../../Utility/Api.json';
 
 const ProjectsCompleted = () => {
   const [projects, setProjects] = useState([]);
