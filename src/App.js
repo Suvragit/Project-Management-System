@@ -2,7 +2,7 @@ import './App.css';
 import Login from './Pages/LoginPage/Login';
 import LandingPage from './Pages/LandingPage/LandingPage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Head from './Pages/Head/Head';
+import Head from './Component/Head/Head';
 import SettingsPage from './Pages/SettingsPage/SettingsPage';
 import MainContainer from './Component/MainContainer';
 import CompletedPage from './Pages/CompletedProjects/CompletedPage';
