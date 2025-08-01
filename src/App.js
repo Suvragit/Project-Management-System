@@ -4,10 +4,10 @@ import LandingPage from './Pages/LandingPage/LandingPage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Head from './Component/Head/Head';
 import SettingsPage from './Pages/SettingsPage/SettingsPage';
-import MainContainer from './Component/MainContainer';
+import MainContainer from './Pages/HomePage/MainContainer';
 import CompletedPage from './Pages/CompletedProjects/CompletedPage';
 import OngoingPage from './Pages/OngoingProjects/OngoingPage';
-import Sidebar from './Component/Sidebar';
+import Sidebar from './Component/Sidebar/Sidebar';
 
 
 function App() {

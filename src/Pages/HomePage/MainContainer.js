@@ -1,5 +1,5 @@
 import InnerContainer from "./InnerContainer";
-import Sidebar from "./Sidebar";
+import Sidebar from "../../Component/Sidebar/Sidebar";
 
 const MainContainer = () => {
   return (
