@@ -1,10 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
-const StatsGrid = () => {
+const Cards = () => {
   const navigate = useNavigate();
   const [statsData, setStatsData] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchStats = async () => {
@@ -14,8 +13,6 @@ const StatsGrid = () => {
         setStatsData(data);
       } catch (error) {
         console.error("Error loading stats data:", error);
-      } finally {
-        setLoading(false);
       }
     };
 
@@ -83,4 +80,4 @@ const StatsGrid = () => {
   );
 };
 
-export default StatsGrid;
+export default Cards;
