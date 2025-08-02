@@ -29,7 +29,7 @@ const OngoingPage=()=>{
           {val.map((project, index) => (
             <div
               key={index}
-              className="bg-sky-100 text-black p-6 rounded-xl mb-6 shadow-md"
+              className="bg-[#BDD292] text-black p-6 rounded-xl mb-6 shadow-md"
             >
               <p><strong>Project Name:</strong> {project.name}</p>
               <p><strong>Project Info:</strong> {project.info}</p>

@@ -55,21 +55,21 @@ const Cards = () => {
         return (
           <div 
             key={index}
-            className="bg-[#D1ECF1] rounded-xl shadow-md p-6 h-48 flex flex-col items-center justify-center
+            className="bg-[#BDD292] rounded-xl shadow-md p-6 h-48 flex flex-col items-center justify-center
                       hover:shadow-lg transition-all cursor-pointer"
             onClick={() => navigate(template.path)}
           >
             <h3 className="text-lg font-bold text-center mb-2">{template.title}</h3>
-            <p className="text-4xl font-bold text-[#5A9CA0] mb-2">
+            <p className="text-4xl font-bold text-[#9EBD5F] mb-2">
               {cardData?.value || ""}
             </p>
             {template.subtitleKey && (
-              <p className="text-sm text-gray-500 text-center">
+              <p className="text-sm text-black text-center">
                 ({subtitleData?.value || ""} days Annually)
               </p>
             )}
             {template.footer && (
-              <p className="text-sm font-medium text-[#5A9CA0] mt-2 text-center">
+              <p className="text-sm font-medium text-black mt-2 text-center">
                 {template.footer}
               </p>
             )}

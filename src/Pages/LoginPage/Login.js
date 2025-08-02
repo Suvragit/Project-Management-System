@@ -39,23 +39,23 @@ const Login =() =>{
         <h2 className=" text-xl font-sans font-semibold grid place-items-center -mt-16 ">
             ALIGN | ASSIGN | ACHIEVE
             </h2>
-        <div className="bg-[#93CDDD] rounded-md  p-8 w-[430px] mx-auto mt-9 h-auto border-2 border-black">
+        <div className="bg-[#77CAFD] rounded-md  p-8 w-[430px] mx-auto mt-9 h-auto border-2 border-black">
             <form className="grid place-items-center"
             onSubmit={handleSubmit}>
                 <select value={loginType}
                 onChange={(e) => setloginType(e.target.value)}
-                 className="w-[290px] rounded-md mb-10 h-[30px] pl-2 border-2 border-orange-400 ">
+                 className="w-[290px] rounded-md mb-10 h-[30px] pl-2 border-2 border-black ">
                     <option value="" disabled hidden>Select Login Type</option>
                     <option value="employee">Employee</option>
                     <option value="admin">Admin</option>
                 </select>
-                <input className="mx-10 mb-10 py-1 rounded-md w-[290px] pl-3 border-2 border-orange-400 "
+                <input className="mx-10 mb-10 py-1 rounded-md w-[290px] pl-3 border-2 border-black "
                  type="email"
                   placeholder="Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   />
-                <input className="mx-10 mb-10 py-1 rounded-md w-[290px] pl-3 border-2 border-orange-400 "
+                <input className="mx-10 mb-10 py-1 rounded-md w-[290px] pl-3 border-2 border-black "
                   type="password"
                    placeholder="Password"
                    value={password}
@@ -65,7 +65,7 @@ const Login =() =>{
             <p className="text-red-600 text-sm mt-1">{error}</p>
           )}
                 
-                <button className=" bg-lime-500 w-[100px] mt-4 mx-20 rounded-md py-1 border border-black hover:bg-lime-600"
+                <button className=" bg-[#2c45ffe9] text-white w-[100px] mt-4 mx-20 rounded-md py-1 border border-black hover:bg-[#0051F2]"
                  type="submit">
                     Login
                    </button>

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../../Assets/logo.png';
+import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../../Assets/logo.png";
 
 const LandingPage = () => {
   return (
@@ -25,7 +25,6 @@ const LandingPage = () => {
           ALIGN | ASSIGN | ACHIEVE
         </p>
 
-        
         <Link to="/login">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-xl text-lg font-semibold hover:bg-blue-800 transition duration-300 shadow-lg">
             Get Started
