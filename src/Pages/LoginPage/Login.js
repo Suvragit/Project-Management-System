@@ -26,6 +26,7 @@ const Login =() =>{
     );
 
         if(matchedUser){
+            localStorage.setItem('email',matchedUser.email);
             navigate('/Home');
         }else{
             setError('Invalid Email or Password');

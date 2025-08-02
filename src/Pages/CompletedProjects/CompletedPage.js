@@ -7,8 +7,9 @@ const ProjectsCompleted = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    const selectedEmployeeId = 1;
-    const employee = jsonData.Employee.find(emp => emp.id === selectedEmployeeId);
+    const selectedemail = localStorage.getItem("email");
+    if(selectedemail){
+    const employee = jsonData.find(emp => emp.email === selectedemail);
 
     if (employee) {
       const completedProjects = employee['completed project'].map(proj => ({
@@ -22,8 +23,7 @@ const ProjectsCompleted = () => {
       }));
       setProjects(completedProjects);
     }
-  }, []);
-
+  }}, []);
   return (
     <div className="h-screen flex flex-col">
       <Head title="Projects Completed" />
