@@ -5,9 +5,10 @@ const OngoingPage=()=>{
     const[val,setval]=useState([]);
 
     useEffect(()=>{
-        const employeeId=1
-        const employee = jsonData.Employee.find(emp => emp.id === employeeId);
-
+    const selectedemail = localStorage.getItem("email");
+    if(selectedemail){
+    const employee = jsonData.find(emp => emp.email === selectedemail);
+    
         if (employee) {
       const OngoingProject = employee['ongoing project'].map(proj => ({
         name: proj['Project Name'],
@@ -20,7 +21,7 @@ const OngoingPage=()=>{
       }));
       setval(OngoingProject);
     }
-},[])
+}},[])
 
 
     return(
