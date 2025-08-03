@@ -8,6 +8,7 @@ import MainContainer from './Pages/HomePage/MainContainer';
 import CompletedPage from './Pages/CompletedProjects/CompletedPage';
 import OngoingPage from './Pages/OngoingProjects/OngoingPage';
 import Sidebar from './Component/Sidebar/Sidebar';
+import NoticeBoard from './Pages/NoticeBoard/Notice';
 
 
 function App() {
@@ -42,6 +43,11 @@ function App() {
                   <OngoingPage />
                 </div>
               </div>
+          } />
+          <Route path='/notice' element={
+            <div className="flex flex-col h-full">
+              <NoticeBoard/>
+            </div>
           } />
         </Routes>
       </BrowserRouter>
