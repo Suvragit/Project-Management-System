@@ -12,8 +12,8 @@ const NoticeBoard = () => {
         <main className="flex-1 p-4 sm:p-6 md:p-8 lg:p-10 overflow-y-auto">
           <div className="bg-[#BDD292] text-black dark:text-white shadow-md rounded-xl p-6">
             <h2 className="text-2xl font-bold mb-4">Project Group – PMS using REACT</h2>
-            <p className="text-sm mb-1">08 July 2025</p>
-            <h3 className="text-lg font-semibold mb-3">Final Review Meeting & Submission Deadline</h3>
+            <p className="text-lg mb-1 font-bold">08 July 2025</p>
+            <h3 className="text-lg font-bold mb-3 mt-4">Final Review Meeting & Submission Deadline</h3>
 
             <p className="mb-2">
               This is to inform all members of the <strong>Project Team</strong> that the 
@@ -22,7 +22,7 @@ const NoticeBoard = () => {
 
             <ul className="list-disc list-inside space-y-2 text-sm">
               <li><strong>Date:</strong> Thursday, 10 July 2025</li>
-              <li><strong>Time:</strong> 4:00 PM – 5:30 PM</li>
+              <li><strong>Time:</strong> 4:00 PM - 5:30 PM</li>
               <li><strong>Venue:</strong> Conference Room B / Google Meet (link will be shared separately)</li>
               <li><strong>Attendees:</strong> All Phoenix project members, Project Manager, and QA Lead</li>
             </ul>
