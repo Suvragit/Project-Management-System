@@ -9,6 +9,7 @@ import CompletedPage from './Pages/CompletedProjects/CompletedPage';
 import OngoingPage from './Pages/OngoingProjects/OngoingPage';
 import Sidebar from './Component/Sidebar/Sidebar';
 import NoticeBoard from './Pages/NoticeBoard/Notice';
+import UpcomingPage from './Pages/UpcomingPage/UpcomingPage';
 
 
 function App() {
@@ -41,6 +42,15 @@ function App() {
                <div className="flex flex-1">
                   <Sidebar />
                   <OngoingPage />
+                </div>
+              </div>
+          } />
+          <Route path='/upcoming' element={
+            <div className="flex flex-col h-full">
+              <Head />
+               <div className="flex flex-1">
+                  <Sidebar />
+                  <UpcomingPage />
                 </div>
               </div>
           } />
