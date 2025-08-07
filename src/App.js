@@ -10,6 +10,7 @@ import OngoingPage from './Pages/OngoingProjects/OngoingPage';
 import Sidebar from './Component/Sidebar/Sidebar';
 import NoticeBoard from './Pages/NoticeBoard/Notice';
 import UpcomingPage from './Pages/UpcomingPage/UpcomingPage';
+import ContactUs from './Pages/ContactUs/Contact';
 
 
 function App() {
@@ -57,6 +58,11 @@ function App() {
           <Route path='/notice' element={
             <div className="flex flex-col h-full">
               <NoticeBoard/>
+            </div>
+          } />
+          <Route path='/Contact' element={
+            <div className="flex flex-col h-full">
+              <ContactUs/>
             </div>
           } />
         </Routes>
