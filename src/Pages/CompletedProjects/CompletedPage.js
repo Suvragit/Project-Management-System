@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Head from '../../Component/Head/Head';
-import Sidebar from '../../Component/Sidebar/Sidebar'; //Changes Made by Sutirtha
+import Sidebar from '../../Component/Sidebar/Sidebar';
 import jsonData from '../../Utility/Api.json';
 
 const ProjectsCompleted = () => {

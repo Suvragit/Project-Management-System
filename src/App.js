@@ -11,6 +11,8 @@ import Sidebar from './Component/Sidebar/Sidebar';
 import NoticeBoard from './Pages/NoticeBoard/Notice';
 import UpcomingPage from './Pages/UpcomingPage/UpcomingPage';
 import ContactUs from './Pages/ContactUs/Contact';
+import ViewSkill from './Pages/Skillset/ViewSkill';
+import EditSkill from './Pages/Skillset/EditSkill';
 
 
 function App() {
@@ -52,6 +54,24 @@ function App() {
                <div className="flex flex-1">
                   <Sidebar />
                   <UpcomingPage />
+                </div>
+              </div>
+          } />
+          <Route path='/skillset' element={
+            <div className="flex flex-col h-full">
+              <Head/>
+               <div className="flex flex-1">
+                  <Sidebar />
+                  <ViewSkill/>
+                </div>
+              </div>
+          } />
+          <Route path='/skillset/addskills' element={
+            <div className="flex flex-col h-full">
+              <Head/>
+               <div className="flex flex-1">
+                  <Sidebar />
+                  <EditSkill/>
                 </div>
               </div>
           } />
