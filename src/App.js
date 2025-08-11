@@ -13,6 +13,7 @@ import UpcomingPage from './Pages/UpcomingPage/UpcomingPage';
 import ContactUs from './Pages/ContactUs/Contact';
 import ViewSkill from './Pages/Skillset/ViewSkill';
 import EditSkill from './Pages/Skillset/EditSkill';
+import WishlistPage from './Pages/Wishlist/WishlistPage';
 
 
 function App() {
@@ -85,6 +86,11 @@ function App() {
               <ContactUs/>
             </div>
           } />
+          <Route path='/Wishlist' element={
+            <div className='flex flex-col h-full'>
+              <WishlistPage/>
+            </div>
+          }/>
         </Routes>
       </BrowserRouter>
     </div>
