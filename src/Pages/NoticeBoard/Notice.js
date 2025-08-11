@@ -3,14 +3,14 @@ import Sidebar from '../../Component/Sidebar/Sidebar';
 
 const NoticeBoard = () => {
   return (
-    <div className="flex flex-col h-full bg-gray-100 dark:bg-gray-900">
+    <div className="flex flex-col h-full bg-gray-100 ">
         <Head/>
 
       <div className="flex flex-1">
         <Sidebar/>
 
         <main className="flex-1 p-4 sm:p-6 md:p-8 lg:p-10 overflow-y-auto">
-          <div className="bg-[#BDD292] text-black dark:text-white shadow-md rounded-xl p-6">
+          <div className="bg-[#BDD292] text-black rounded-xl p-6">
             <h2 className="text-2xl font-bold mb-4">Project Group – PMS using REACT</h2>
             <p className="text-lg mb-1 font-bold">08 July 2025</p>
             <h3 className="text-lg font-bold mb-3 mt-4">Final Review Meeting & Submission Deadline</h3>
