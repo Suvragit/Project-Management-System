@@ -128,9 +128,9 @@ const UpcomingPage = () => {
   return (
     <div className="w-2/3 flex-1 bg-white overflow-y-auto p-10">
       {loading ? (
-        <p className="text-center text-gray-600 mt-4">Loading...</p>
+        <p className="text-center text-black mt-4">Loading...</p>
       ) : projects.length === 0 ? (
-        <p className="text-center text-gray-600 mt-4">No Upcoming Projects Found.</p>
+        <p className="text-center text-black mt-4">No Upcoming Projects Found.</p>
       ) : (
         projects.map((project, index) => {
           const isWishlisted = wishlist.some(item => item.name === project.name);
