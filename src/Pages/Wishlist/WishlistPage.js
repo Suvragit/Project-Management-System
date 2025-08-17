@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Head from "../../Component/Head/Head";
-import Sidebar from "../../Component/Sidebar/Sidebar";
+import React,{useState,useEffect} from "react";
 import { FaTrash } from "react-icons/fa";
 
 const WISHLIST_BIN_ID = "689a1f61d0ea881f4056ccf5"; // Wishlist bin
@@ -96,10 +94,7 @@ const WishlistPage = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen">
-      <Head />
-      <div className="flex flex-1">
-        <Sidebar />
+    
         <div className="flex-1 p-10 bg-white overflow-y-auto">
           {loading ? (
             <p className="text-center text-black mt-4">Loading...</p>
@@ -131,8 +126,6 @@ const WishlistPage = () => {
             ))
           )}
         </div>
-      </div>
-    </div>
   );
 };
 
