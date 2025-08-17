@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Head from '../../Component/Head/Head';
-import Sidebar from '../../Component/Sidebar/Sidebar';
 import jsonData from '../../Utility/Api.json';
 
 const ProjectsCompleted = () => {
@@ -25,11 +23,6 @@ const ProjectsCompleted = () => {
     }
   }}, []);
   return (
-    <div className="h-screen flex flex-col">
-      <Head title="Projects Completed" />
-
-      <div className="flex flex-1">
-        <Sidebar activePage="Completed Projects" />
 
         <div className="flex-1 bg-white overflow-y-auto p-10">
           {projects.map((project, index) => (
@@ -47,8 +40,6 @@ const ProjectsCompleted = () => {
             </div>
           ))}
         </div>
-      </div>
-    </div>
   );
 };
 

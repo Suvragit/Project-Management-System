@@ -37,7 +37,11 @@ function App() {
           } />
           <Route path='/completed' element={
             <div className="flex flex-col h-full">
-              <CompletedPage />
+              <Head />
+              <div className="flex flex-1">
+                  <Sidebar />
+                  <CompletedPage />
+                </div>
             </div> 
           } />
           <Route path='/ongoing' element={
@@ -88,7 +92,11 @@ function App() {
           } />
           <Route path='/Wishlist' element={
             <div className='flex flex-col h-full'>
-              <WishlistPage/>
+              <Head/>
+              <div className="flex flex-1">
+                  <Sidebar />
+                  <WishlistPage/>
+                </div>
             </div>
           }/>
         </Routes>
