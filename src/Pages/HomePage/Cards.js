@@ -136,7 +136,7 @@ const Cards = () => {
             onClick={() => navigate(template.path)}
           >
             <h3 className="text-lg font-bold text-center mb-2">{template.title}</h3>
-            <p className="text-4xl font-bold text-[#9EBD5F] mb-2">
+            <p className="text-4xl font-bold text-[#000000] mb-2">
               {value}
             </p>
             {subtitle !== null && (
@@ -145,7 +145,7 @@ const Cards = () => {
               </p>
             )}
             {footer !== null && (
-              <p className="text-sm font-medium text-black mt-2 text-center">
+              <p className="text-sm font-medium text-red-500 mt-2 text-center">
                 {footer} Days Left
               </p>
             )}
