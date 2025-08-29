@@ -11,7 +11,7 @@ const SidebarItems = () => {
   const menuItems = [
     { name: "Home", path: "/Home" },
     { name: "Projects Completed", path: "/completed" },
-    { name: "Projects Ongoing", path: "/ongoing" },
+    { name: "Ongoing Projects", path: "/ongoing" },
     { name: "Upcoming Projects", path: "/upcoming" },
     { name: "Skillset", path: "/skillset" },
     { name: "Wishlist", path: "/wishlist" },
