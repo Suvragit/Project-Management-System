@@ -79,9 +79,9 @@ const AdminCards = () => {
             </div>
 
             {/* Bell Icon */}
-            <div className="absolute top-4 right-4 flex items-center">
+            <div className="absolute bottom-4 right-4 flex items-center">
               <FaBell className="text-yellow-500 w-6 h-6" />
-              <span className="ml-1 text-red-600 font-bold text-sm">1</span>
+              
             </div>
           </div>
         ))
