@@ -1,15 +1,26 @@
+import { Routes, Route } from "react-router-dom";
 import Cards from "./Cards";
 import AdminCards from "./AdminCards";
+import AdminUpcomingPage from "./AdminUpcomingPage"; 
 
 const InnerContainer = () => {
   const loginType = localStorage.getItem("role");
+  
   return (
     <div className="flex-1 p-6 overflow-y-auto bg-white">
-      <h1 className="text-2xl font-bold mb-6 text-[#9EBD5F]"></h1>
-      <div className="grid grid-cols-1  gap-6">
+      <h1 className="text-2xl font-bold mb-6 text-[#9EBD5F]">Dashboard</h1>
+      <div className="grid grid-cols-1 gap-6">
         <div className="lg:col-span-2">
-          {loginType === "Admin" ? <AdminCards /> : <Cards />}
-          
+          <Routes>
+            <Route 
+              path="/" 
+              element={loginType === "Admin" ? <AdminCards /> : <Cards />} 
+            />
+            <Route 
+              path="/add" 
+              element={loginType === "Admin" ? <AdminUpcomingPage /> : <Cards />} 
+            />
+          </Routes>
         </div>
       </div>
     </div>

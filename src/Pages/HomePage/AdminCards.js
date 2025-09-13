@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
-import { FaBell } from "react-icons/fa";
+import { FaBell, FaPlus } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
-const UPCOMING_BIN_ID = "689a1f7e43b1c97be91be549"; // Upcoming projects bin
+const UPCOMING_BIN_ID = "689a1f7e43b1c97be91be549";
 const MASTER_KEY = "$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS";
 
 const AdminCards = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate(); // Add navigation
 
-  const username = localStorage.getItem("name"); // project coordinator’s name
+  const username = localStorage.getItem("name");
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -25,7 +27,6 @@ const AdminCards = () => {
         const data = await res.json();
 
         if (data?.record?.["upcoming project"]) {
-          // Filter projects based on coordinator === username
           const userProjects = data.record["upcoming project"]
             .filter((proj) => proj["Project coordinator"] === username)
             .map((proj) => ({
@@ -51,8 +52,20 @@ const AdminCards = () => {
     fetchProjects();
   }, [username]);
 
+  const handleAddProject = () => {
+    navigate("/home/add"); // Navigate to add project page
+  };
+
   return (
     <div className="w-full flex-1 bg-white overflow-y-auto p-6">
+      {/* Blue + Button */}
+      <button 
+        onClick={handleAddProject}
+        className="fixed bottom-6 right-6 bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-600 transition-colors z-10"
+      >
+        <FaPlus className="w-6 h-6" />
+      </button>
+
       {loading ? (
         <p className="text-center text-black mt-4">Loading...</p>
       ) : !username ? (
@@ -78,10 +91,8 @@ const AdminCards = () => {
               <p><strong>Project Credit:</strong> {project.credit}</p>
             </div>
 
-            {/* Bell Icon */}
             <div className="absolute bottom-4 right-4 flex items-center">
               <FaBell className="text-yellow-500 w-6 h-6" />
-              
             </div>
           </div>
         ))
