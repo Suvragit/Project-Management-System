@@ -14,6 +14,8 @@ import ContactUs from "./Pages/ContactUs/Contact";
 import ViewSkill from "./Pages/Skillset/ViewSkill";
 import EditSkill from "./Pages/Skillset/EditSkill";
 import WishlistPage from "./Pages/Wishlist/WishlistPage";
+import AdminOngoingPage from "./Pages/AdminOngoingProjects/AdminOngoingPage";
+import MemberDetails from "./Pages/AdminOngoingProjects/MemberDetails";
 
 
 function App() {
@@ -61,6 +63,30 @@ function App() {
                 <div className="flex flex-1">
                   <Sidebar />
                   <OngoingPage />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/ongoingproject"
+            element={
+              <div className="flex flex-col h-full">
+                <Head />
+                <div className="flex flex-1">
+                  <Sidebar />
+                  <AdminOngoingPage />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/ongoingproject/memberdetails"
+            element={
+              <div className="flex flex-col h-full">
+                <Head />
+                <div className="flex flex-1">
+                  <Sidebar />
+                  <MemberDetails/>
                 </div>
               </div>
             }
