@@ -14,7 +14,7 @@ const SidebarItems = () => {
   const adminMenu = [
     { name: "Home", path: "/home" },
     { name: "Projects Completed", path: "/completed" },
-    { name: "Projects Ongoing", path: "/ongoing" },
+    { name: "Projects Ongoing", path: "/ongoingproject" },
     { name: "Notice Board", path: "/notice" },
     { name: "Email Notification", path: "/notifications" },
     { name: "Contact us", path: "/contact" },
