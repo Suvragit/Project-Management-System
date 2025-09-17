@@ -1,10 +1,15 @@
-import Settingsicon from "../../Assets/settingsicon.png";
 import { Link } from "react-router-dom";
+import { FiSettings } from "react-icons/fi";
 
-const ProfileSettings=()=>{
-    return(
+const ProfileSettings = () => {
+    return (
         <Link to="/Home/Settings">
-        <button className="w-10 h-10 mx-12 my-2 border rounded-full bg-white "><img src={Settingsicon}/></button>
+            <button 
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 hover:bg-green-200 transition-colors"
+                title="Settings"
+            >
+                <FiSettings className="w-8 h-8 text-green-800" />
+            </button>
         </Link>
     )
 }
