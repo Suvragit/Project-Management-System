@@ -1,3 +1,4 @@
+// AdminOngoingPage.js
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 
@@ -38,7 +39,7 @@ const AdminOngoingPage = () => {
               info: proj["Project Info"],
               skills: proj["Skills Required"],
               coordinator: proj["Project Coordinator"],
-              members: proj["Members"],
+              members: proj["Members"],   // could be string OR array
               duration: proj["Project Duration"],
               credit: proj["Project Credit"],
             }));
@@ -76,17 +77,26 @@ const AdminOngoingPage = () => {
             <p><strong>Project Info:</strong> {project.info}</p>
             <p><strong>Skills Required:</strong> {project.skills}</p>
             <p><strong>Project Coordinator:</strong> {project.coordinator}</p>
-            <p><strong>Members:</strong> {project.members}</p>
+            
+            {/* FIX: Handle both array and string members */}
+            <p>
+              <strong>Members:</strong>{" "}
+              {Array.isArray(project.members)
+                ? project.members.join(", ")
+                : project.members || "No members listed"}
+            </p>
+
             <p><strong>Project Duration:</strong> {project.duration}</p>
             <p><strong>Project Credit:</strong> {project.credit}</p>
 
-          <Link to="/ongoingproject/memberdetails">
-            <button
-              className="absolute bottom-4 right-4 border border-black rounded-md px-4 py-1 bg-blue-600 text-white hover:bg-blue-400 hover:text-black transition-colors duration-200"
-            >
-              Member's Details
-            </button>
-          </Link>
+            <Link to="/ongoingproject/memberdetails">
+              <button
+                onClick={() => localStorage.setItem("selectedProject", JSON.stringify(project))}
+                className="absolute bottom-4 right-4 border border-black rounded-md px-4 py-1 bg-blue-600 text-white hover:bg-blue-400 hover:text-black transition-colors duration-200"
+              >
+                Member's Details
+              </button>
+            </Link>
           </div>
         ))
       )}
