@@ -16,6 +16,7 @@ import EditSkill from "./Pages/Skillset/EditSkill";
 import WishlistPage from "./Pages/Wishlist/WishlistPage";
 import AdminOngoingPage from "./Pages/AdminOngoingProjects/AdminOngoingPage";
 import MemberDetails from "./Pages/AdminOngoingProjects/MemberDetails";
+import SearchResults from "./Component/Head/SearchResults";
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
               </div>
             }
           />
+
           <Route
             path="/Home/Settings"
             element={
@@ -43,6 +45,17 @@ function App() {
               </div>
             }
           />
+
+          <Route
+            path="/search"
+            element={
+              <div>
+                <Head />
+                <SearchResults />
+              </div>
+            }
+          />
+
           <Route
             path="/completed"
             element={
@@ -55,6 +68,7 @@ function App() {
               </div>
             }
           />
+
           <Route
             path="/ongoing"
             element={
@@ -67,6 +81,7 @@ function App() {
               </div>
             }
           />
+
           <Route
             path="/ongoingproject"
             element={
@@ -79,6 +94,7 @@ function App() {
               </div>
             }
           />
+
           <Route
             path="/ongoingproject/memberdetails"
             element={
@@ -91,6 +107,7 @@ function App() {
               </div>
             }
           />
+
           <Route
             path="/upcoming"
             element={
@@ -103,6 +120,7 @@ function App() {
               </div>
             }
           />
+
           <Route
             path="/skillset"
             element={
@@ -115,6 +133,7 @@ function App() {
               </div>
             }
           />
+
           <Route
             path="/skillset/addskills"
             element={
@@ -127,6 +146,7 @@ function App() {
               </div>
             }
           />
+
           <Route
             path="/notice"
             element={
@@ -135,6 +155,7 @@ function App() {
               </div>
             }
           />
+
           <Route
             path="/Contact"
             element={
@@ -143,6 +164,7 @@ function App() {
               </div>
             }
           />
+
           <Route
             path="/Wishlist"
             element={
@@ -155,6 +177,7 @@ function App() {
               </div>
             }
           />
+
         </Routes>
       </BrowserRouter>
     </div>
