@@ -17,6 +17,7 @@ import WishlistPage from "./Pages/Wishlist/WishlistPage";
 import AdminOngoingPage from "./Pages/AdminOngoingProjects/AdminOngoingPage";
 import MemberDetails from "./Pages/AdminOngoingProjects/MemberDetails";
 import SearchResults from "./Component/Head/SearchResults";
+import SignUp from "./Pages/SignUp/SignUp";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route
             path="/Home/*"
             element={
