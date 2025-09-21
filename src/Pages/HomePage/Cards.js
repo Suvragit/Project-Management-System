@@ -85,8 +85,7 @@ const Cards = () => {
     },
     { 
       title: "Credits Achieved", 
-      key: "creditsAchieved",
-      path: "/credits" 
+      key: "creditsAchieved"
     },
     { 
       title: "Ongoing Projects",
@@ -97,8 +96,7 @@ const Cards = () => {
       title: "Days In Bench",
       key: "daysInBench",
       subtitleKey: "annualBenchDays",
-      footerKey: "daysLeft",
-      path: "/bench" 
+      footerKey: "daysLeft"
     }
   ];
 

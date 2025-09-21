@@ -1,34 +1,44 @@
 {
-    "upcoming project":[
-        {
-            "Project name":"onlineportfolio",
-            "Project info": "A portfolio page of your own",
-            "Skills required":"HTML, CSS, ReactJS, MongoDB",
-            "Project coordinator":"Ankush",
-            "Members required":"3-4",
-            "Project duration":"6 months",
-            "Deadline to join":"01.08.2025",
-            "Project credit": 25
-        },
-        {
-            "Project name":"Healthy meter",
-            "Project info":"A virtual health meter that scales one’s health on their different health reports",
-            "Skills required":"Machine Learning,Python, Frontend OR Backend",
-            "Project coordinator":"Sourav",
-            "Members required":"4-5",
-            "Project duration":"6 months",
-            "Deadline to join":"01.08.2025",
-            "Project credit": 25
-        },
-        {
-            "Project name":"Weapon Detection System ",
-            "Project info": "A smart weapon detection system using Machine Learning for public safety",
-            "Skills required":"Python, Machine Learning, React JS,Frontend OR Backend",
-            "Project coordinator":"Ankush",
-            "Members required":"3-4",
-            "Project duration":"9 months",
-            "Deadline to join":"25.10.2025",
-            "Project credit": 25
-        }
-    ]
+  "upcoming project": [
+    {
+      "Project name": "onlineportfolio",
+      "Project info": "A portfolio page of your own",
+      "Skills required": "HTML, CSS, ReactJS, MongoDB",
+      "Project coordinator": "Ankush",
+      "Members required": "3-4",
+      "Project duration": "6 months",
+      "Deadline to join": "01.08.2025",
+      "Project credit": 25
+    },
+    {
+      "Project name": "Healthy meter",
+      "Project info": "A virtual health meter that scales one’s health on their different health reports",
+      "Skills required": "Machine Learning,Python, Frontend OR Backend",
+      "Project coordinator": "Sourav",
+      "Members required": "4-5",
+      "Project duration": "6 months",
+      "Deadline to join": "01.08.2025",
+      "Project credit": 25
+    },
+    {
+      "Project name": "Weapon Detection System ",
+      "Project info": "A smart weapon detection system using Machine Learning for public safety",
+      "Skills required": "Python, Machine Learning, React JS,Frontend OR Backend",
+      "Project coordinator": "Ankush",
+      "Members required": "3-4",
+      "Project duration": "9 months",
+      "Deadline to join": "25.10.2025",
+      "Project credit": 25
+    },
+    {
+      "Project name": "PMS",
+      "Project info": "Developing a Wev Dev Project that is Project Management System",
+      "Skills required": "HTML, CSS, JavaScript, ReactJS",
+      "Project coordinator": "Sourav",
+      "Members required": "3-4",
+      "Project duration": "4 Months",
+      "Deadline to join": "2025-10-01",
+      "Project credit": "20"
+    }
+  ]
 }

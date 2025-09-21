@@ -65,7 +65,7 @@ const Login = () => {
 
     return (
         <div>
-            <img src={OptiAssign} className="w-72 h-72 mx-auto -mt-16 -mb-7" />
+            <img src={OptiAssign} alt="logo" className="w-72 h-72 mx-auto -mt-16 -mb-7" />
             <h2 className="text-xl font-sans font-semibold grid place-items-center -mt-16">
                 ALIGN | ASSIGN | ACHIEVE
             </h2>
