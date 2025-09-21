@@ -54,8 +54,8 @@ export default function SignUp() {
         name: formData.name,
         image: "https://dummyjson.com/icon/sophiab/128",
         skills: [],
-        bench: "",
         wishlist: [],
+        bench: "0",
         "ongoing project": [],
         "completed project": []
       };
