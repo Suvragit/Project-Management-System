@@ -35,7 +35,7 @@ const Login = () => {
             if (!response.ok) throw new Error('Failed to fetch data');
             
             const data = await response.json();
-            const jsonData = data.record; // Your user data is in data.record
+            const jsonData = data.record;
             
             // Find the matched user
             const matchedUser = jsonData.find(
@@ -46,13 +46,12 @@ const Login = () => {
             );
 
             if (matchedUser) {
-                // Store user data in localStorage
                 localStorage.setItem('userId', matchedUser.id);
                 localStorage.setItem('email', matchedUser.email);
                 localStorage.setItem('name', matchedUser.name);
                 localStorage.setItem('role', matchedUser.role);
                 
-                navigate('/Home');
+                navigate('/home');
             } else {
                 setError('Invalid Email or Password');
             }
@@ -103,12 +102,20 @@ const Login = () => {
                     )}
                     
                     <button 
-                        className="bg-[#2c45ffe9] text-white w-[100px] mt-4 mx-20 rounded-md py-1 border border-black hover:bg-[#0051F2] disabled:opacity-50"
+                        className="bg-[#2c45ffe9] text-white w-[100px] mt-4 rounded-md py-1 border border-black hover:bg-[#0051F2] disabled:opacity-50"
                         type="submit"
                         disabled={loading}
                     >
                         {loading ? 'Logging in...' : 'Login'}
                     </button>
+
+                    {/* Sign Up link under login button */}
+                    <Link 
+                        to="/signup" 
+                        className="text-blue-700 hover:underline mt-3"
+                    >
+                        Don’t have an account? Sign Up
+                    </Link>
                 </form>
             </div>
         </div>
