@@ -1,13 +1,7 @@
-import Head from "../../Component/Head/Head";
-import Sidebar from "../../Component/Sidebar/Sidebar";
 import { FaEnvelope, FaPhoneSquare, FaGlobe } from "react-icons/fa";
 
 const Contact = () => {
     return (
-        <div className="flex flex-col h-full">
-            <Head />
-            <div className="flex flex-1">
-                <Sidebar />
                 <div className="p-6 w-full">
                     
                     <div className="mb-6">
@@ -63,8 +57,6 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
     );
 };
 

@@ -1,13 +1,7 @@
-import Head from '../../Component/Head/Head';
-import Sidebar from '../../Component/Sidebar/Sidebar';
 
 const NoticeBoard = () => {
   return (
-    <div className="flex flex-col h-full bg-gray-100 ">
-        <Head/>
 
-      <div className="flex flex-1">
-        <Sidebar/>
 
         <main className="flex-1 p-4 sm:p-6 md:p-8 lg:p-10 overflow-y-auto">
           <div className="bg-[#BDD292] text-black rounded-xl p-6">
@@ -57,8 +51,7 @@ const NoticeBoard = () => {
             </div>
           </div>
         </main>
-      </div>
-    </div>
+
   );
 };
 

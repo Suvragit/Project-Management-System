@@ -150,11 +150,16 @@ function App() {
             }
           />
 
+
           <Route
             path="/notice"
             element={
               <div className="flex flex-col h-full">
-                <NoticeBoard />
+                <Head />
+                <div className="flex flex-1">
+                  <Sidebar />
+                  <NoticeBoard />
+                </div>
               </div>
             }
           />
@@ -163,7 +168,11 @@ function App() {
             path="/Contact"
             element={
               <div className="flex flex-col h-full">
-                <ContactUs />
+                <Head />
+                <div className="flex flex-1">
+                  <Sidebar />
+                  <ContactUs />
+                </div>
               </div>
             }
           />
