@@ -150,7 +150,7 @@ const AdminOngoingPage = () => {
             <p><strong>Skills Required:</strong> {project.skills}</p>
             <p><strong>Project Coordinator:</strong> {project.coordinator}</p>
             <p><strong>Members:</strong> {Array.isArray(project.members) ? project.members.join(", ") : project.members}</p>
-            <p><strong>Project Duration:</strong> {project.duration}</p>
+            <p><strong>Project Duration(months):</strong> {project.duration}</p>
             <p><strong>Project Credit:</strong> {project.credit}</p>
 
             <div className="absolute bottom-4 right-4 flex space-x-2">

@@ -20,6 +20,7 @@ import SearchResults from "./Component/Head/SearchResults";
 import SignUp from "./Pages/SignUp/SignUp";
 import BadgesEarned from "./Pages/BadgesEarned/BadgesEarned";
 import EmailNotification from "./Pages/EmailNotification/EmailNotification";
+import Requests from "./Pages/EmployeeRequests/Requests";
 
 function App() {
   return (
@@ -198,6 +199,19 @@ function App() {
                 <div className="flex flex-1">
                   <Sidebar />
                   <EmailNotification />
+                </div>
+              </div>
+            }
+          />
+
+           <Route
+            path="/requests"
+            element={
+              <div className="flex flex-col h-full">
+                <Head />
+                <div className="flex flex-1">
+                  <Sidebar />
+                  <Requests/>
                 </div>
               </div>
             }

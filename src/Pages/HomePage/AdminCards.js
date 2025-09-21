@@ -8,7 +8,7 @@ const MASTER_KEY = "$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS
 const AdminCards = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate(); // Add navigation
+  const navigate = useNavigate();
 
   const username = localStorage.getItem("name");
 
@@ -53,13 +53,19 @@ const AdminCards = () => {
   }, [username]);
 
   const handleAddProject = () => {
-    navigate("/home/add"); // Navigate to add project page
+    navigate("/home/add");
+  };
+
+  // 🟢 Save project name in localStorage when bell clicked
+  const handleBellClick = (projectName) => {
+    localStorage.setItem("projectName", projectName);
+    navigate("/requests");
   };
 
   return (
     <div className="w-full flex-1 bg-white overflow-y-auto p-6">
       {/* Blue + Button */}
-      <button 
+      <button
         onClick={handleAddProject}
         className="fixed bottom-6 right-6 bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-600 transition-colors z-10"
       >
@@ -86,13 +92,15 @@ const AdminCards = () => {
               <p><strong>Skills Required:</strong> {project.skills}</p>
               <p><strong>Project Coordinator:</strong> {project.coordinator}</p>
               <p><strong>Members:</strong> {project.members}</p>
-              <p><strong>Project Duration:</strong> {project.duration}</p>
+              <p><strong>Project Duration(months):</strong> {project.duration}</p>
               <p><strong>Deadline to join:</strong> {project.deadline}</p>
               <p><strong>Project Credit:</strong> {project.credit}</p>
             </div>
 
             <div className="absolute bottom-4 right-4 flex items-center">
-              <FaBell className="text-yellow-500 w-6 h-6" />
+              <button onClick={() => handleBellClick(project.name)}>
+                <FaBell className="text-yellow-500 w-6 h-6 cursor-pointer" />
+              </button>
             </div>
           </div>
         ))

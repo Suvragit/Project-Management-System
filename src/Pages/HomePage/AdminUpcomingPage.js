@@ -107,7 +107,7 @@ const AdminUpcomingPage = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">Project Duration</label>
+          <label className="block text-sm font-medium text-gray-700 mb-2">Project Duration(months)</label>
           <input type="text" name="duration" value={formData.duration} onChange={handleInputChange} placeholder="Type Here..." className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" required />
         </div>
 
