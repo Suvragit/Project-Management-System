@@ -72,7 +72,7 @@ export default function SignUp() {
       });
 
       alert("Sign Up Successful! Redirecting to Login...");
-      navigate("/");
+      navigate("/login");
 
     } catch (err) {
       console.error("Error during signup:", err);
