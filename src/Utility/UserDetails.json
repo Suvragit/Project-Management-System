@@ -12,31 +12,36 @@
       "C",
       "Python",
       "C++",
-      "SQL"
+      "SQL",
+      "Java",
+      "Machine Learning",
+      "Angular",
+      "java oops"
     ],
     "bench": "13",
     "wishlist": [
       {
-        "Project name": "onlineportfolio",
-        "Project info": "A portfolio page of your own",
-        "Skills required": "HTML, CSS, ReactJS, MongoDB",
-        "Project coordinator": "Ankush",
-        "Members required": "3-4",
-        "Project duration": "6 months",
-        "Deadline to join": "01.08.2025",
-        "Project credit": 25
+        "name": "onlineportfolio",
+        "info": "A portfolio page of your own",
+        "skills": "HTML, CSS, ReactJS, MongoDB",
+        "coordinator": "Ankush",
+        "members": "3-4",
+        "duration": "6 months",
+        "deadline": "01.08.2025",
+        "credit": 25
+      },
+      {
+        "name": "Healthy meter",
+        "info": "A virtual health meter that scales one’s health on their different health reports",
+        "skills": "Machine Learning,Python, Frontend OR Backend",
+        "coordinator": "Sourav",
+        "members": "4-5",
+        "duration": "6 months",
+        "deadline": "01.08.2025",
+        "credit": 25
       }
     ],
     "ongoing project": [
-      {
-        "Project Name": "Task Flick",
-        "Project Info": "A  daily task tracker with habit-building and streak analytics.",
-        "Skills Required": "React, Node.js, MongoDB",
-        "Project Coordinator": "Sourav",
-        "Members": 5,
-        "Project Duration": "5 months",
-        "Project Credit": 25
-      },
       {
         "Project Name": "MeetMate",
         "Project Info": "Meeting Scheduler with Time-Zone Awareness",
@@ -74,13 +79,18 @@
         "Members": 6,
         "Project Duration": "6 months",
         "Project Credit": 28
+      },
+      {
+        "Project Name": "Task Flick",
+        "Project Info": "A  daily task tracker with habit-building and streak analytics.",
+        "Skills Required": "React, Node.js, MongoDB",
+        "Project Coordinator": "Sourav",
+        "Members": 5,
+        "Project Duration": "5 months",
+        "Project Credit": 25,
+        "Completion Date": "9/18/2025"
       }
-    ],
-    "request":["onlineportfolio","Healthy meter"],
-    "notification":[{
-      "project name":"onlineportfolio",
-      "status": "accepted"
-    }]
+    ]
   },
   {
     "id": 2,
@@ -99,14 +109,24 @@
     "bench": "12",
     "wishlist": [
       {
-        "Project name": "onlineportfolio",
-        "Project info": "A portfolio page of your own",
-        "Skills required": "HTML, CSS, ReactJS, MongoDB",
-        "Project coordinator": "Ankush",
-        "Members required": "3-4",
-        "Project duration": "6 months",
-        "Deadline to join": "01.08.2025",
-        "Project credit": 25
+        "name": "onlineportfolio",
+        "info": "A portfolio page of your own",
+        "skills": "HTML, CSS, ReactJS, MongoDB",
+        "coordinator": "Ankush",
+        "members": "3-4",
+        "duration": "6 months",
+        "deadline": "01.08.2025",
+        "credit": 25
+      },
+      {
+        "name": "Healthy meter",
+        "info": "A virtual health meter that scales one’s health on their different health reports",
+        "skills": "Machine Learning,Python, Frontend OR Backend",
+        "coordinator": "Sourav",
+        "members": "4-5",
+        "duration": "6 months",
+        "deadline": "01.08.2025",
+        "credit": 25
       }
     ],
     "ongoing project": [
@@ -118,6 +138,24 @@
         "Members": 4,
         "Project Duration": "5 months",
         "Project Credit": 25
+      },
+      {
+        "Project Name": "Task Flick",
+        "Project Info": "A  daily task tracker with habit-building and streak analytics.",
+        "Skills Required": "React, Node.js, MongoDB",
+        "Project Coordinator": "Sourav",
+        "Members": 5,
+        "Project Duration": "5 months",
+        "Project Credit": 25
+      },
+      {
+        "Project Name": "MeetMate",
+        "Project Info": "Meeting Scheduler with Time-Zone Awareness",
+        "Skills Required": "React, Node.js, MongoDB,Python",
+        "Project Coordinator": "Sourav",
+        "Members": 4,
+        "Project Duration": "2 months",
+        "Project Credit": 15
       },
       {
         "Project Name": "Forumly",
@@ -158,11 +196,16 @@
         "Project Credit": 15
       }
     ],
-    "request":["onlineportfolio","Healthy meter"],
-    "notification":[{
-      "project name":"onlineportfolio",
-      "status": "accepted"
-    }]
+    "request": [
+      "onlineportfolio",
+      "Healthy meter"
+    ],
+    "notification": [
+      {
+        "project name": "onlineportfolio",
+        "status": "accepted"
+      }
+    ]
   },
   {
     "id": 3,
@@ -180,18 +223,7 @@
       "SQL"
     ],
     "bench": "11",
-    "wishlist": [
-      {
-        "Project name": "onlineportfolio",
-        "Project info": "A portfolio page of your own",
-        "Skills required": "HTML, CSS, ReactJS, MongoDB",
-        "Project coordinator": "Ankush",
-        "Members required": "3-4",
-        "Project duration": "6 months",
-        "Deadline to join": "01.08.2025",
-        "Project credit": 25
-      }
-    ],
+    "wishlist": [],
     "ongoing project": [
       {
         "Project Name": "MindMatch ",
@@ -201,6 +233,24 @@
         "Members": 4,
         "Project Duration": "5 months",
         "Project Credit": 25
+      },
+      {
+        "Project Name": "Task Flick",
+        "Project Info": "A  daily task tracker with habit-building and streak analytics.",
+        "Skills Required": "React, Node.js, MongoDB",
+        "Project Coordinator": "Sourav",
+        "Members": 5,
+        "Project Duration": "5 months",
+        "Project Credit": 25
+      },
+      {
+        "Project Name": "MeetMate",
+        "Project Info": "Meeting Scheduler with Time-Zone Awareness",
+        "Skills Required": "React, Node.js, MongoDB,Python",
+        "Project Coordinator": "Sourav",
+        "Members": 4,
+        "Project Duration": "2 months",
+        "Project Credit": 15
       },
       {
         "Project Name": "TrackEZ ",
@@ -232,11 +282,16 @@
         "Project Credit": 28
       }
     ],
-    "request":["onlineportfolio","Healthy meter"],
-    "notification":[{
-      "project name":"onlineportfolio",
-      "status": "accepted"
-    }]
+    "request": [
+      "onlineportfolio",
+      "Healthy meter"
+    ],
+    "notification": [
+      {
+        "project name": "onlineportfolio",
+        "status": "accepted"
+      }
+    ]
   },
   {
     "id": 4,
@@ -256,26 +311,17 @@
     "bench": "15",
     "wishlist": [
       {
-        "Project name": "onlineportfolio",
-        "Project info": "A portfolio page of your own",
-        "Skills required": "HTML, CSS, ReactJS, MongoDB",
-        "Project coordinator": "Ankush",
-        "Members required": "3-4",
-        "Project duration": "6 months",
-        "Deadline to join": "01.08.2025",
-        "Project credit": 25
+        "name": "Healthy meter",
+        "info": "A virtual health meter that scales one’s health on their different health reports",
+        "skills": "Machine Learning,Python, Frontend OR Backend",
+        "coordinator": "Sourav",
+        "members": "4-5",
+        "duration": "6 months",
+        "deadline": "01.08.2025",
+        "credit": 25
       }
     ],
     "ongoing project": [
-      {
-        "Project Name": "CovidScope ",
-        "Project Info": " Interactive Covid-19 Data Dashboard",
-        "Skills Required": "ReactJS or MongoDB,API",
-        "Project Coordinator": "Sourav",
-        "Members": 4,
-        "Project Duration": "2 months",
-        "Project Credit": 15
-      },
       {
         "Project Name": "ZenoBoard ",
         "Project Info": " Real-Time IoT Sensor Data Visualizer",
@@ -304,13 +350,28 @@
         "Members": 4,
         "Project Duration": "3 months",
         "Project Credit": 15
+      },
+      {
+        "Project Name": "CovidScope ",
+        "Project Info": " Interactive Covid-19 Data Dashboard",
+        "Skills Required": "ReactJS or MongoDB,API",
+        "Project Coordinator": "Sourav",
+        "Members": 4,
+        "Project Duration": "2 months",
+        "Project Credit": 15,
+        "Completion Date": "9/18/2025"
       }
     ],
-    "request":["onlineportfolio","Healthy meter"],
-    "notification":[{
-      "project name":"onlineportfolio",
-      "status": "accepted"
-    }]
+    "request": [
+      "onlineportfolio",
+      "Healthy meter"
+    ],
+    "notification": [
+      {
+        "project name": "onlineportfolio",
+        "status": "accepted"
+      }
+    ]
   },
   {
     "id": "A1",
@@ -330,24 +391,6 @@
       "Nodejs"
     ],
     "ongoing project": [
-      {
-        "Project Name": "Task Flick",
-        "Project Info": "A  daily task tracker with habit-building and streak analytics.",
-        "Skills Required": "React, Node.js, MongoDB",
-        "Project Coordinator": "Sourav",
-        "Members": 5,
-        "Project Duration": "5 months",
-        "Project Credit": 25
-      },
-      {
-        "Project Name": "MeetMate",
-        "Project Info": "Meeting Scheduler with Time-Zone Awareness",
-        "Skills Required": "React, Node.js, MongoDB,Python",
-        "Project Coordinator": "Sourav",
-        "Members": 4,
-        "Project Duration": "2 months",
-        "Project Credit": 15
-      },
       {
         "Project Name": "VoteRight",
         "Project Info": "Secure Online Voting System",
@@ -394,6 +437,26 @@
         "Members": 3,
         "Project Duration": "5 months",
         "Project Credit": 18
+      },
+      {
+        "Project Name": "Task Flick",
+        "Project Info": "A  daily task tracker with habit-building and streak analytics.",
+        "Skills Required": "React, Node.js, MongoDB",
+        "Project Coordinator": "Sourav",
+        "Members": 5,
+        "Project Duration": "5 months",
+        "Project Credit": 25,
+        "Completion Date": "9/18/2025"
+      },
+      {
+        "Project Name": "MeetMate",
+        "Project Info": "Meeting Scheduler with Time-Zone Awareness",
+        "Skills Required": "React, Node.js, MongoDB,Python",
+        "Project Coordinator": "Sourav",
+        "Members": 4,
+        "Project Duration": "2 months",
+        "Project Credit": 15,
+        "Completion Date": "9/18/2025"
       }
     ]
   },

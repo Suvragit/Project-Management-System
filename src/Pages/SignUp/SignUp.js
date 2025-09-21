@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import OptiAssign from '../../Assets/OptiAssign.png'; 
+import OptiAssign from '../../Assets/OptiAssign.png';
 
 import { useNavigate, Link } from "react-router-dom";
 
@@ -52,14 +52,12 @@ export default function SignUp() {
         password: formData.password,
         role: formData.role,
         name: formData.name,
-        image: "",
+        image: "https://dummyjson.com/icon/sophiab/128",
         skills: [],
         bench: "",
         wishlist: [],
         "ongoing project": [],
-        "completed project": [],
-        request: [],
-        notification: []
+        "completed project": []
       };
 
       // Update JSONBin
@@ -74,7 +72,7 @@ export default function SignUp() {
       });
 
       alert("Sign Up Successful! Redirecting to Login...");
-      navigate("/");
+      navigate("/login");
 
     } catch (err) {
       console.error("Error during signup:", err);
@@ -84,17 +82,19 @@ export default function SignUp() {
 
   return (
     <div>
-      {/* Logo and text same as Login */}
-      <div className="flex flex-col items-center mt-6">
-  <img src={OptiAssign} alt="Logo" className="w-44 h-44 mb-3" />
-  <h2 className="text-3xl font-sans font-semibold">CREATE YOUR ACCOUNT</h2>
-</div>
+      <div className="flex flex-col items-center ">
+        <img src={OptiAssign} alt="logo" className="w-72 h-72 mx-auto -mt-16 -mb-3" />
+        <h2 className="text-xl font-sans font-semibold grid place-items-center -mt-16 mb-7">
+          ALIGN | ASSIGN | ACHIEVE
+        </h2>
+        <h3 className="text-3xl font-sans font-semibold mb-2">CREATE YOUR ACCOUNT</h3>
+      </div>
 
 
 
       <div className="bg-[#77CAFD] rounded-md p-8 w-[430px] mx-auto mt-6 h-auto border-2 border-black">
         <form className="grid place-items-center" onSubmit={handleSubmit}>
-          
+
           <input
             type="text"
             name="name"
@@ -162,7 +162,7 @@ export default function SignUp() {
 
           <p className="text-sm mt-3">
             Already have an account?{" "}
-            <Link to="/" className="text-blue-700 hover:underline">
+            <Link to="/login" className="text-blue-700 hover:underline">
               Login
             </Link>
           </p>

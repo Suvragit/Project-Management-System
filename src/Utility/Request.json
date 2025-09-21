@@ -1,0 +1,76 @@
+{
+  "requests": [
+    {
+      "requestId": "REQ-U1-001",
+      "userId": 1,
+      "username": "Shreyan",
+      "projectName": "onlineportfolio",
+      "status": "pending",
+      "handledBy": "Ankush",
+      "handledRole": "Admin"
+    },
+    {
+      "requestId": "REQ-U1-002",
+      "userId": 1,
+      "username": "Shreyan",
+      "projectName": "Healthy meter",
+      "status": "pending",
+      "handledBy": "Sourav",
+      "handledRole": "Admin"
+    },
+    {
+      "requestId": "REQ-U2-001",
+      "userId": 2,
+      "username": "Suvrajit",
+      "projectName": "onlineportfolio",
+      "status": "pending",
+      "handledBy": "Ankush",
+      "handledRole": "Admin"
+    },
+    {
+      "requestId": "REQ-U2-002",
+      "userId": 2,
+      "username": "Suvrajit",
+      "projectName": "Healthy meter",
+      "status": "pending",
+      "handledBy": "Sourav",
+      "handledRole": "Admin"
+    },
+    {
+      "requestId": "REQ-U3-001",
+      "userId": 3,
+      "username": "Tirthendu",
+      "projectName": "onlineportfolio",
+      "status": "pending",
+      "handledBy": "Ankush",
+      "handledRole": "Admin"
+    },
+    {
+      "requestId": "REQ-U3-002",
+      "userId": 3,
+      "username": "Tirthendu",
+      "projectName": "Healthy meter",
+      "status": "pending",
+      "handledBy": "Sourav",
+      "handledRole": "Admin"
+    },
+    {
+      "requestId": "REQ-U4-001",
+      "userId": 4,
+      "username": "Sutirtha",
+      "projectName": "onlineportfolio",
+      "status": "pending",
+      "handledBy": "Ankush",
+      "handledRole": "Admin"
+    },
+    {
+      "requestId": "REQ-U4-002",
+      "userId": 4,
+      "username": "Sutirtha",
+      "projectName": "Healthy meter",
+      "status": "pending",
+      "handledBy": "Sourav",
+      "handledRole": "Admin"
+    }
+  ]
+}

@@ -18,7 +18,8 @@ import AdminOngoingPage from "./Pages/AdminOngoingProjects/AdminOngoingPage";
 import MemberDetails from "./Pages/AdminOngoingProjects/MemberDetails";
 import SearchResults from "./Component/Head/SearchResults";
 import SignUp from "./Pages/SignUp/SignUp";
-
+import BadgesEarned from "./Pages/BadgesEarned/BadgesEarned";
+import EmailNotification from "./Pages/EmailNotification/EmailNotification";
 
 function App() {
   return (
@@ -149,11 +150,16 @@ function App() {
             }
           />
 
+
           <Route
             path="/notice"
             element={
               <div className="flex flex-col h-full">
-                <NoticeBoard />
+                <Head />
+                <div className="flex flex-1">
+                  <Sidebar />
+                  <NoticeBoard />
+                </div>
               </div>
             }
           />
@@ -162,7 +168,11 @@ function App() {
             path="/Contact"
             element={
               <div className="flex flex-col h-full">
-                <ContactUs />
+                <Head />
+                <div className="flex flex-1">
+                  <Sidebar />
+                  <ContactUs />
+                </div>
               </div>
             }
           />
@@ -175,6 +185,32 @@ function App() {
                 <div className="flex flex-1">
                   <Sidebar />
                   <WishlistPage />
+                </div>
+              </div>
+            }
+          />
+
+            <Route
+            path="/notifications"
+            element={
+              <div className="flex flex-col h-full">
+                <Head />
+                <div className="flex flex-1">
+                  <Sidebar />
+                  <EmailNotification />
+                </div>
+              </div>
+            }
+          />
+
+            <Route
+            path="/badges"
+            element={
+              <div className="flex flex-col h-full">
+                <Head />
+                <div className="flex flex-1">
+                  <Sidebar />
+                  <BadgesEarned />
                 </div>
               </div>
             }

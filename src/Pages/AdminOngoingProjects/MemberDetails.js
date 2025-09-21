@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const BIN_ID = "689a1f61d0ea881f4056ccf5";
-const MASTER_KEY =
-  "$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS";
+const MASTER_KEY ="$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS";
 const API_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}/latest`;
 
 const MemberDetails = () => {
@@ -55,8 +54,8 @@ const MemberDetails = () => {
     fetchMembers();
   }, []);
 
-  if (loading) return <p className="text-center mt-4">Loading...</p>;
-  if (!project) return <p className="text-center mt-4">No project selected.</p>;
+  if (loading) return <p className="text-black  text-center mt-4">Loading...</p>;
+  if (!project) return <p className="text-black  text-center mt-4">No project selected.</p>;
 
   return (
     <div className="bg-[#c2d697] rounded-lg shadow-md p-6 w-2/3 mx-auto mt-10">
