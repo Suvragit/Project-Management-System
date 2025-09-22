@@ -4,13 +4,19 @@ import { FiUpload } from "react-icons/fi";
 
 const UPCOMING_BIN_ID = "689a1f7e43b1c97be91be549"; // Upcoming projects bin
 const WISHLIST_BIN_ID = "689a1f61d0ea881f4056ccf5"; // Wishlist bin
-const MASTER_KEY = "$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS";
+const REQUESTS_BIN_ID = "68caf85a43b1c97be9465eed"; // Requests bin
+const MASTER_KEY =
+  "$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS";
 
 const UpcomingPage = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [wishlist, setWishlist] = useState([]);
+
+  // Get user details from localStorage
   const userEmail = localStorage.getItem("email");
+  const username = localStorage.getItem("name");
+  const userId = localStorage.getItem("userId"); // must be stored on login
 
   // Fetch upcoming projects
   useEffect(() => {
@@ -18,12 +24,12 @@ const UpcomingPage = () => {
       try {
         const res = await fetch(`https://api.jsonbin.io/v3/b/${UPCOMING_BIN_ID}`, {
           method: "GET",
-          headers: { "X-Master-Key": MASTER_KEY }
+          headers: { "X-Master-Key": MASTER_KEY },
         });
         const data = await res.json();
 
         if (data?.record?.["upcoming project"]) {
-          const UpcomingProject = data.record["upcoming project"].map(proj => ({
+          const UpcomingProject = data.record["upcoming project"].map((proj) => ({
             name: proj["Project name"],
             info: proj["Project info"],
             skills: proj["Skills required"],
@@ -45,7 +51,7 @@ const UpcomingPage = () => {
     fetchUpcoming();
   }, []);
 
-  // Fetch wishlist for logged-in user
+  // Fetch wishlist
   useEffect(() => {
     const fetchWishlist = async () => {
       if (!userEmail) return;
@@ -53,12 +59,12 @@ const UpcomingPage = () => {
       try {
         const res = await fetch(`https://api.jsonbin.io/v3/b/${WISHLIST_BIN_ID}`, {
           method: "GET",
-          headers: { "X-Master-Key": MASTER_KEY }
+          headers: { "X-Master-Key": MASTER_KEY },
         });
         const data = await res.json();
 
         if (Array.isArray(data?.record)) {
-          const userEntry = data.record.find(item => item.email === userEmail);
+          const userEntry = data.record.find((item) => item.email === userEmail);
           setWishlist(userEntry?.wishlist || []);
         }
       } catch (err) {
@@ -69,7 +75,7 @@ const UpcomingPage = () => {
     fetchWishlist();
   }, [userEmail]);
 
-  // Handle wishlist add
+  // Wishlist handler
   const handleWishlist = async (project) => {
     if (!userEmail) {
       alert("User not logged in!");
@@ -77,51 +83,108 @@ const UpcomingPage = () => {
     }
 
     try {
-      // Fetch current wishlist data
       const res = await fetch(`https://api.jsonbin.io/v3/b/${WISHLIST_BIN_ID}`, {
         method: "GET",
-        headers: { "X-Master-Key": MASTER_KEY }
+        headers: { "X-Master-Key": MASTER_KEY },
       });
       const data = await res.json();
       let allUsers = Array.isArray(data?.record) ? data.record : [];
 
-      // Find user
-      const userIndex = allUsers.findIndex(item => item.email === userEmail);
+      const userIndex = allUsers.findIndex((item) => item.email === userEmail);
 
       if (userIndex !== -1) {
-        // User exists → update their wishlist
         const exists = allUsers[userIndex].wishlist.some(
-          item => item.name === project.name
+          (item) => item.name === project.name
         );
         if (!exists) {
           allUsers[userIndex].wishlist.push(project);
         }
       } else {
-        // User not found → add new entry
         allUsers.push({
           email: userEmail,
-          wishlist: [project]
+          wishlist: [project],
         });
       }
 
-      // Update JSONBin
       await fetch(`https://api.jsonbin.io/v3/b/${WISHLIST_BIN_ID}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
-          "X-Master-Key": MASTER_KEY
+          "X-Master-Key": MASTER_KEY,
         },
-        body: JSON.stringify(allUsers)
+        body: JSON.stringify(allUsers),
       });
 
-      // Update local state
-      setWishlist(prev =>
-        prev.some(item => item.name === project.name)
+      setWishlist((prev) =>
+        prev.some((item) => item.name === project.name)
           ? prev
           : [...prev, project]
       );
     } catch (err) {
       console.error("Error updating wishlist:", err);
+    }
+  };
+
+  // Apply handler (triggered by upload icon)
+  const handleApply = async (project) => {
+    if (!userEmail || !username || !userId) {
+      alert("User not logged in!");
+      return;
+    }
+
+    try {
+      const res = await fetch(`https://api.jsonbin.io/v3/b/${REQUESTS_BIN_ID}`, {
+        method: "GET",
+        headers: { "X-Master-Key": MASTER_KEY },
+      });
+      const data = await res.json();
+
+      // Always expect { requests: [] }
+      let allRequests = Array.isArray(data?.record?.requests)
+        ? data.record.requests
+        : [];
+
+      // prevent duplicate applications
+      const alreadyApplied = allRequests.some(
+        (req) =>
+          req.userId === Number(userId) && req.projectName === project.name
+      );
+      if (alreadyApplied) {
+        alert(`You already applied for ${project.name}`);
+        return;
+      }
+
+      // Generate new requestId
+      const userRequests = allRequests.filter((r) => r.userId === Number(userId));
+      const nextCount = userRequests.length + 1;
+      const newRequestId = `REQ-U${userId}-${String(nextCount).padStart(3, "0")}`;
+
+      const newRequest = {
+        requestId: newRequestId,
+        userId: Number(userId),
+        username: username,
+        projectName: project.name,
+        status: "pending",
+        handledBy: project.coordinator, // set to project coordinator
+        handledRole: "Admin",
+      };
+
+      allRequests.push(newRequest);
+
+      // Wrap inside { requests: [...] }
+      await fetch(`https://api.jsonbin.io/v3/b/${REQUESTS_BIN_ID}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Master-Key": MASTER_KEY,
+        },
+        body: JSON.stringify({ requests: allRequests }),
+      });
+
+      alert(`Applied successfully for ${project.name}`);
+    } catch (err) {
+      console.error("Error applying for project:", err);
+      alert("Something went wrong. Try again!");
     }
   };
 
@@ -133,7 +196,7 @@ const UpcomingPage = () => {
         <p className="text-center text-black mt-4">No Upcoming Projects Found.</p>
       ) : (
         projects.map((project, index) => {
-          const isWishlisted = wishlist.some(item => item.name === project.name);
+          const isWishlisted = wishlist.some((item) => item.name === project.name);
 
           return (
             <div
@@ -150,12 +213,19 @@ const UpcomingPage = () => {
               <p><strong>Project Credit:</strong> {project.credit}</p>
 
               <div className="absolute bottom-4 right-4 flex gap-3">
-                <button className="p-1">
+                {/* Upload icon works as Apply button */}
+                <button
+                  className="p-1"
+                  onClick={() => handleApply(project)}
+                  title="Apply"
+                >
                   <FiUpload size={28} />
                 </button>
+
                 <button
                   className="relative w-8 h-8 flex items-center justify-center"
                   onClick={() => handleWishlist(project)}
+                  title="Add to Wishlist"
                 >
                   {isWishlisted ? (
                     <AiFillStar className="text-yellow-300 w-full h-full" />
