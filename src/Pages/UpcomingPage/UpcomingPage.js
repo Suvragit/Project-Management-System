@@ -12,11 +12,48 @@ const UpcomingPage = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [wishlist, setWishlist] = useState([]);
-  const [appliedProjects, setAppliedProjects] = useState([]); // track applied projects
+  const [appliedProjects, setAppliedProjects] = useState([]);
+  const [rejectedProjects, setRejectedProjects] = useState([]); // track rejected projects
 
   const userEmail = localStorage.getItem("email");
   const username = localStorage.getItem("name");
   const userId = localStorage.getItem("userId"); // must be stored on login
+
+  // Fetch applied + rejected projects
+  useEffect(() => {
+    const fetchRequests = async () => {
+      if (!userId) return;
+
+      try {
+        const res = await fetch(`https://api.jsonbin.io/v3/b/${REQUESTS_BIN_ID}`, {
+          method: "GET",
+          headers: { "X-Master-Key": MASTER_KEY },
+        });
+        const data = await res.json();
+
+        const allRequests = Array.isArray(data?.record?.requests)
+          ? data.record.requests
+          : [];
+
+        const userRequests = allRequests.filter((req) => req.userId === Number(userId));
+
+        const userApplied = userRequests
+          .filter((req) => req.status !== "rejected")
+          .map((req) => req.projectName);
+
+        const userRejected = userRequests
+          .filter((req) => req.status === "rejected")
+          .map((req) => req.projectName);
+
+        setAppliedProjects(userApplied);
+        setRejectedProjects(userRejected);
+      } catch (err) {
+        console.error("Error fetching applied/rejected projects:", err);
+      }
+    };
+
+    fetchRequests();
+  }, [userId]);
 
   // Fetch upcoming projects
   useEffect(() => {
@@ -29,7 +66,7 @@ const UpcomingPage = () => {
         const data = await res.json();
 
         if (data?.record?.["upcoming project"]) {
-          const UpcomingProject = data.record["upcoming project"].map((proj) => ({
+          let UpcomingProject = data.record["upcoming project"].map((proj) => ({
             name: proj["Project name"],
             info: proj["Project info"],
             skills: proj["Skills required"],
@@ -39,6 +76,12 @@ const UpcomingPage = () => {
             deadline: proj["Deadline to join"],
             credit: proj["Project credit"],
           }));
+
+          // 🔴 Remove rejected projects from the list
+          UpcomingProject = UpcomingProject.filter(
+            (proj) => !rejectedProjects.includes(proj.name)
+          );
+
           setProjects(UpcomingProject);
         }
       } catch (err) {
@@ -49,7 +92,7 @@ const UpcomingPage = () => {
     };
 
     fetchUpcoming();
-  }, []);
+  }, [rejectedProjects]); // refetch when rejected projects change
 
   // Fetch wishlist
   useEffect(() => {
@@ -74,35 +117,6 @@ const UpcomingPage = () => {
 
     fetchWishlist();
   }, [userEmail]);
-
-  // Fetch applied projects for the logged-in user
-  useEffect(() => {
-    const fetchAppliedProjects = async () => {
-      if (!userId) return;
-
-      try {
-        const res = await fetch(`https://api.jsonbin.io/v3/b/${REQUESTS_BIN_ID}`, {
-          method: "GET",
-          headers: { "X-Master-Key": MASTER_KEY },
-        });
-        const data = await res.json();
-
-        const allRequests = Array.isArray(data?.record?.requests)
-          ? data.record.requests
-          : [];
-
-        const userApplied = allRequests
-          .filter((req) => req.userId === Number(userId))
-          .map((req) => req.projectName);
-
-        setAppliedProjects(userApplied);
-      } catch (err) {
-        console.error("Error fetching applied projects:", err);
-      }
-    };
-
-    fetchAppliedProjects();
-  }, [userId]);
 
   // Wishlist handler
   const handleWishlist = async (project) => {
@@ -172,7 +186,6 @@ const UpcomingPage = () => {
         ? data.record.requests
         : [];
 
-      // prevent duplicate applications
       const alreadyApplied = allRequests.some(
         (req) =>
           req.userId === Number(userId) && req.projectName === project.name
@@ -207,7 +220,6 @@ const UpcomingPage = () => {
         body: JSON.stringify({ requests: allRequests }),
       });
 
-      // Update applied projects state to hide the apply button
       setAppliedProjects((prev) => [...prev, project.name]);
 
       alert(`Applied successfully for ${project.name}`);
@@ -243,7 +255,6 @@ const UpcomingPage = () => {
               <p><strong>Project Credit:</strong> {project.credit}</p>
 
               <div className="absolute bottom-4 right-4 flex gap-3">
-                {/* Upload icon works as Apply button; hide if already applied */}
                 {!isApplied && (
                   <button
                     className="p-1"
