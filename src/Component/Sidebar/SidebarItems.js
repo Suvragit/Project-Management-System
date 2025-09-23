@@ -16,7 +16,7 @@ const SidebarItems = () => {
     { name: "Projects Completed", path: "/completed" },
     { name: "Projects Ongoing", path: "/ongoingproject" },
     { name: "Notice Board", path: "/notice" },
-    { name: "Email Notification", path: "/notifications" },
+    { name: "Email Notification", path: "/notificationsadmin" },
     { name: "Contact us", path: "/contact" },
   ];
 
