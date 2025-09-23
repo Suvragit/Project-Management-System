@@ -12,8 +12,8 @@ const UpcomingPage = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [wishlist, setWishlist] = useState([]);
+  const [appliedProjects, setAppliedProjects] = useState([]); // track applied projects
 
-  // Get user details from localStorage
   const userEmail = localStorage.getItem("email");
   const username = localStorage.getItem("name");
   const userId = localStorage.getItem("userId"); // must be stored on login
@@ -75,6 +75,35 @@ const UpcomingPage = () => {
     fetchWishlist();
   }, [userEmail]);
 
+  // Fetch applied projects for the logged-in user
+  useEffect(() => {
+    const fetchAppliedProjects = async () => {
+      if (!userId) return;
+
+      try {
+        const res = await fetch(`https://api.jsonbin.io/v3/b/${REQUESTS_BIN_ID}`, {
+          method: "GET",
+          headers: { "X-Master-Key": MASTER_KEY },
+        });
+        const data = await res.json();
+
+        const allRequests = Array.isArray(data?.record?.requests)
+          ? data.record.requests
+          : [];
+
+        const userApplied = allRequests
+          .filter((req) => req.userId === Number(userId))
+          .map((req) => req.projectName);
+
+        setAppliedProjects(userApplied);
+      } catch (err) {
+        console.error("Error fetching applied projects:", err);
+      }
+    };
+
+    fetchAppliedProjects();
+  }, [userId]);
+
   // Wishlist handler
   const handleWishlist = async (project) => {
     if (!userEmail) {
@@ -125,7 +154,7 @@ const UpcomingPage = () => {
     }
   };
 
-  // Apply handler (triggered by upload icon)
+  // Apply handler
   const handleApply = async (project) => {
     if (!userEmail || !username || !userId) {
       alert("User not logged in!");
@@ -139,7 +168,6 @@ const UpcomingPage = () => {
       });
       const data = await res.json();
 
-      // Always expect { requests: [] }
       let allRequests = Array.isArray(data?.record?.requests)
         ? data.record.requests
         : [];
@@ -154,7 +182,6 @@ const UpcomingPage = () => {
         return;
       }
 
-      // Generate new requestId
       const userRequests = allRequests.filter((r) => r.userId === Number(userId));
       const nextCount = userRequests.length + 1;
       const newRequestId = `REQ-U${userId}-${String(nextCount).padStart(3, "0")}`;
@@ -165,13 +192,12 @@ const UpcomingPage = () => {
         username: username,
         projectName: project.name,
         status: "pending",
-        handledBy: project.coordinator, // set to project coordinator
+        handledBy: project.coordinator,
         handledRole: "Admin",
       };
 
       allRequests.push(newRequest);
 
-      // Wrap inside { requests: [...] }
       await fetch(`https://api.jsonbin.io/v3/b/${REQUESTS_BIN_ID}`, {
         method: "PUT",
         headers: {
@@ -180,6 +206,9 @@ const UpcomingPage = () => {
         },
         body: JSON.stringify({ requests: allRequests }),
       });
+
+      // Update applied projects state to hide the apply button
+      setAppliedProjects((prev) => [...prev, project.name]);
 
       alert(`Applied successfully for ${project.name}`);
     } catch (err) {
@@ -197,6 +226,7 @@ const UpcomingPage = () => {
       ) : (
         projects.map((project, index) => {
           const isWishlisted = wishlist.some((item) => item.name === project.name);
+          const isApplied = appliedProjects.includes(project.name);
 
           return (
             <div
@@ -213,14 +243,16 @@ const UpcomingPage = () => {
               <p><strong>Project Credit:</strong> {project.credit}</p>
 
               <div className="absolute bottom-4 right-4 flex gap-3">
-                {/* Upload icon works as Apply button */}
-                <button
-                  className="p-1"
-                  onClick={() => handleApply(project)}
-                  title="Apply"
-                >
-                  <FiUpload size={28} />
-                </button>
+                {/* Upload icon works as Apply button; hide if already applied */}
+                {!isApplied && (
+                  <button
+                    className="p-1"
+                    onClick={() => handleApply(project)}
+                    title="Apply"
+                  >
+                    <FiUpload size={28} />
+                  </button>
+                )}
 
                 <button
                   className="relative w-8 h-8 flex items-center justify-center"
