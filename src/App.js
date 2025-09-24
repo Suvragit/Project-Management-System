@@ -21,6 +21,7 @@ import SignUp from "./Pages/SignUp/SignUp";
 import BadgesEarned from "./Pages/BadgesEarned/BadgesEarned";
 import EmailNotification from "./Pages/EmailNotification/EmailNotification";
 import Requests from "./Pages/EmployeeRequests/Requests";
+import EmailNotificationAdmin from "./Pages/EmailNotification/EmailNotificationAdmin";
 
 function App() {
   return (
@@ -57,8 +58,8 @@ function App() {
                 <Head />
                 <SearchResults />
               </div>
-            }
-          />
+            }
+          />
 
           <Route
             path="/completed"
@@ -106,7 +107,7 @@ function App() {
                 <Head />
                 <div className="flex flex-1">
                   <Sidebar />
-                  <MemberDetails/>
+                  <MemberDetails />
                 </div>
               </div>
             }
@@ -191,7 +192,7 @@ function App() {
             }
           />
 
-            <Route
+          <Route
             path="/notifications"
             element={
               <div className="flex flex-col h-full">
@@ -204,20 +205,33 @@ function App() {
             }
           />
 
-           <Route
+          <Route
+            path="/notificationsadmin"
+            element={
+              <div className="flex flex-col h-full">
+                <Head />
+                <div className="flex flex-1">
+                  <Sidebar />
+                  <EmailNotificationAdmin />
+                </div>
+              </div>
+            }
+          />
+
+          <Route
             path="/requests"
             element={
               <div className="flex flex-col h-full">
                 <Head />
                 <div className="flex flex-1">
                   <Sidebar />
-                  <Requests/>
+                  <Requests />
                 </div>
               </div>
             }
           />
 
-            <Route
+          <Route
             path="/badges"
             element={
               <div className="flex flex-col h-full">

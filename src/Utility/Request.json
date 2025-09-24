@@ -5,7 +5,7 @@
       "userId": 1,
       "username": "Shreyan",
       "projectName": "onlineportfolio",
-      "status": "pending",
+      "status": "accepted",
       "handledBy": "Ankush",
       "handledRole": "Admin"
     },
@@ -23,7 +23,7 @@
       "userId": 2,
       "username": "Suvrajit",
       "projectName": "onlineportfolio",
-      "status": "pending",
+      "status": "rejected",
       "handledBy": "Ankush",
       "handledRole": "Admin"
     },
@@ -41,7 +41,7 @@
       "userId": 3,
       "username": "Tirthendu",
       "projectName": "onlineportfolio",
-      "status": "pending",
+      "status": "accepted",
       "handledBy": "Ankush",
       "handledRole": "Admin"
     },
@@ -59,7 +59,7 @@
       "userId": 4,
       "username": "Sutirtha",
       "projectName": "onlineportfolio",
-      "status": "pending",
+      "status": "rejected",
       "handledBy": "Ankush",
       "handledRole": "Admin"
     },
@@ -70,6 +70,60 @@
       "projectName": "Healthy meter",
       "status": "pending",
       "handledBy": "Sourav",
+      "handledRole": "Admin"
+    },
+    {
+      "requestId": "REQ-U1-003",
+      "userId": 1,
+      "username": "Shreyan",
+      "projectName": "PMS",
+      "status": "pending",
+      "handledBy": "Sourav",
+      "handledRole": "Admin"
+    },
+    {
+      "requestId": "REQ-U1-004",
+      "userId": 1,
+      "username": "Shreyan",
+      "projectName": "Task Manager",
+      "status": "rejected",
+      "handledBy": "Ankush",
+      "handledRole": "Admin"
+    },
+    {
+      "requestId": "REQ-U1-005",
+      "userId": 1,
+      "username": "Shreyan",
+      "projectName": "Project Management System",
+      "status": "accepted",
+      "handledBy": "Ankush",
+      "handledRole": "Admin"
+    },
+    {
+      "requestId": "REQ-U2-003",
+      "userId": 2,
+      "username": "Suvrajit",
+      "projectName": "Project Management System",
+      "status": "rejected",
+      "handledBy": "Ankush",
+      "handledRole": "Admin"
+    },
+    {
+      "requestId": "REQ-U2-004",
+      "userId": 2,
+      "username": "Suvrajit",
+      "projectName": "PMS",
+      "status": "pending",
+      "handledBy": "Sourav",
+      "handledRole": "Admin"
+    },
+    {
+      "requestId": "REQ-U2-005",
+      "userId": 2,
+      "username": "Suvrajit",
+      "projectName": "Task Manager",
+      "status": "rejected",
+      "handledBy": "Ankush",
       "handledRole": "Admin"
     }
   ]
