@@ -6,8 +6,8 @@
       "Skills required": "HTML, CSS, ReactJS, MongoDB",
       "Project coordinator": "Ankush",
       "Members required": "3-4",
-      "Project duration": "6 months",
-      "Deadline to join": "01.08.2025",
+      "Project duration": "6",
+      "Deadline to join": "2025-10-21",
       "Project credit": 25
     },
     {
@@ -16,18 +16,8 @@
       "Skills required": "Machine Learning,Python, Frontend OR Backend",
       "Project coordinator": "Sourav",
       "Members required": "4-5",
-      "Project duration": "6 months",
-      "Deadline to join": "01.08.2025",
-      "Project credit": 25
-    },
-    {
-      "Project name": "Weapon Detection System ",
-      "Project info": "A smart weapon detection system using Machine Learning for public safety",
-      "Skills required": "Python, Machine Learning, React JS,Frontend OR Backend",
-      "Project coordinator": "Ankush",
-      "Members required": "3-4",
-      "Project duration": "9 months",
-      "Deadline to join": "25.10.2025",
+      "Project duration": "6",
+      "Deadline to join": "2025-10-2",
       "Project credit": 25
     },
     {
@@ -36,8 +26,28 @@
       "Skills required": "HTML, CSS, JavaScript, ReactJS",
       "Project coordinator": "Sourav",
       "Members required": "3-4",
-      "Project duration": "4 Months",
+      "Project duration": "4",
       "Deadline to join": "2025-10-01",
+      "Project credit": "20"
+    },
+    {
+      "Project name": "Project Management System",
+      "Project info": "Helps Organization to keep a track of employee",
+      "Skills required": "React.js, Node.js, HTML, CSS, Javascript",
+      "Project coordinator": "Ankush",
+      "Members required": "4",
+      "Project duration": "4",
+      "Deadline to join": "2025-10-09",
+      "Project credit": "60"
+    },
+    {
+      "Project name": "Task Manager",
+      "Project info": "Helps to manage daily task.",
+      "Skills required": "CSS, HTML, JAVASCRIPT",
+      "Project coordinator": "Ankush",
+      "Members required": "4",
+      "Project duration": "4",
+      "Deadline to join": "2025-10-27",
       "Project credit": "20"
     }
   ]
