@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { X_MASTER_KEY,UPCOMING_BIN_ID} from "D:/PMS/pms_react/pms/src/Utility/Constant.js";
 
-const UPCOMING_BIN_ID = "689a1f7e43b1c97be91be549";
-const MASTER_KEY = "$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS";
+const U_BIN_ID = UPCOMING_BIN_ID;
+const MASTER_KEY = X_MASTER_KEY;
 
 const AdminUpcomingPage = () => {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ const AdminUpcomingPage = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(`https://api.jsonbin.io/v3/b/${UPCOMING_BIN_ID}`, {
+      const response = await fetch(`https://api.jsonbin.io/v3/b/${U_BIN_ID}`, {
         headers: { "X-Master-Key": MASTER_KEY },
       });
       
@@ -51,7 +52,7 @@ const AdminUpcomingPage = () => {
 
       const updatedProjects = [...existingProjects, newProject];
 
-      const updateResponse = await fetch(`https://api.jsonbin.io/v3/b/${UPCOMING_BIN_ID}`, {
+      const updateResponse = await fetch(`https://api.jsonbin.io/v3/b/${U_BIN_ID}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

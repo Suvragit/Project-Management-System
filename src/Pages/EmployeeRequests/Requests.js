@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { X_MASTER_KEY, REQUESTS_BIN_ID} from "D:/PMS/pms_react/pms/src/Utility/Constant.js";
 
-const BIN_ID = "68caf85a43b1c97be9465eed";
-const MASTER_KEY = "$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS";
+const BIN_ID = REQUESTS_BIN_ID;
+const MASTER_KEY = X_MASTER_KEY;
 
 const Requests = () => {
   const navigate = useNavigate();
@@ -81,7 +82,7 @@ const Requests = () => {
 
   return (
     <div className="flex-1 relative p-6 overflow-y-auto">
-      {/* Back button relative to this content area */}
+      
       <div className="absolute top-4 right-4">
         <button
           onClick={() => {

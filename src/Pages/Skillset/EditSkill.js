@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { X_MASTER_KEY,USERS_BIN_ID } from "D:/PMS/pms_react/pms/src/Utility/Constant.js"; 
 
-const BIN_ID = "689a1f61d0ea881f4056ccf5";
+
+const BIN_ID = USERS_BIN_ID;
 const API_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
-const MASTER_KEY = "$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS";
+const MASTER_KEY = X_MASTER_KEY;
 
 const EditSkill = () => {
   const [newSkill, setNewSkill] = useState("");
@@ -53,11 +55,11 @@ const EditSkill = () => {
         body: JSON.stringify(users),
       });
 
-      setMessage("✅ Skill added successfully!");
+      setMessage("Skill added successfully!");
       setNewSkill("");
     } catch (error) {
       console.error(error);
-      setMessage("❌ Failed to add skill.");
+      setMessage("Failed to add skill.");
     }
   };
 

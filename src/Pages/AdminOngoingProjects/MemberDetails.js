@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { X_MASTER_KEY, USERS_BIN_ID } from "D:/PMS/pms_react/pms/src/Utility/Constant.js"; 
 
-const BIN_ID = "689a1f61d0ea881f4056ccf5";
-const MASTER_KEY ="$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS";
+const BIN_ID = USERS_BIN_ID;
+const MASTER_KEY = X_MASTER_KEY;
 const API_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}/latest`;
 
 const MemberDetails = () => {
@@ -34,7 +35,7 @@ const MemberDetails = () => {
         const data = await response.json();
         const employees = data.record;
 
-        // find employees working on this project
+        
         const projectMembers = employees.filter((emp) =>
           emp["ongoing project"]?.some(
             (p) =>
@@ -61,19 +62,19 @@ const MemberDetails = () => {
     <div className="bg-[#c2d697] rounded-lg shadow-md p-6 w-2/3 mx-auto mt-10">
       <h1 className="text-2xl font-bold mb-6 text-center">Team Members</h1>
 
-      {/* Header */}
+      
       <div className="grid grid-cols-2 text-center font-bold px-10 py-2 ">
         <span>Name</span>
         <span>Role</span>
       </div>
 
-      {/* Coordinator */}
+      
       <div className="grid grid-cols-2 text-center py-2 px-10">
         <span>{project.coordinator}</span>
         <span>Co-ordinator</span>
       </div>
 
-      {/* Members */}
+      
       {members
         .filter((m) => m.name !== project.coordinator)
         .map((m, idx) => (
@@ -86,7 +87,7 @@ const MemberDetails = () => {
           </div>
         ))}
 
-      {/* Back button */}
+      
       <div className="flex justify-center mt-8">
         <Link to="/ongoingproject">
           <button

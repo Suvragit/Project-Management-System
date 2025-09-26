@@ -1,20 +1,20 @@
 import React,{useState,useEffect} from "react";
 import { FaTrash } from "react-icons/fa";
+import { X_MASTER_KEY, USERS_BIN_ID } from "D:/PMS/pms_react/pms/src/Utility/Constant.js"; 
 
-const WISHLIST_BIN_ID = "689a1f61d0ea881f4056ccf5"; // Wishlist bin
-const MASTER_KEY =
-  "$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS";
+const WISHLIST_BIN_ID = USERS_BIN_ID; 
+const MASTER_KEY = X_MASTER_KEY;
 
 const WishlistPage = () => {
   const [projects, setProjects] = useState([]);
   const [selectedEmail, setSelectedEmail] = useState("");
-  const [loading, setLoading] = useState(true); // ✅ Added loading state
+  const [loading, setLoading] = useState(true); 
 
-  // Fetch wishlist on mount
+  
   useEffect(() => {
     const fetchWishlist = async () => {
       try {
-        setLoading(true); // ✅ start loading
+        setLoading(true); 
 
         const email = localStorage.getItem("email");
         setSelectedEmail(email || "");
@@ -55,14 +55,14 @@ const WishlistPage = () => {
       } catch (error) {
         console.error("Error fetching wishlist:", error);
       } finally {
-        setLoading(false); // ✅ end loading
+        setLoading(false); 
       }
     };
 
     fetchWishlist();
   }, []);
 
-  // Remove project from wishlist
+ 
   const handleRemove = async (index) => {
     try {
       const res = await fetch(`https://api.jsonbin.io/v3/b/${WISHLIST_BIN_ID}`, {
@@ -106,7 +106,7 @@ const WishlistPage = () => {
                 key={index}
                 className="relative bg-[#BDD292] p-4 rounded-lg shadow mb-6 text-black"
               >
-                {/* Trash Icon at Top Right */}
+                
                 <button
                   onClick={() => handleRemove(index)}
                   className="absolute bottom-2 right-2 bg-red-500 hover:bg-red-600 text-white p-2 rounded-full shadow"

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
+import { X_MASTER_KEY, USERS_BIN_ID } from "D:/PMS/pms_react/pms/src/Utility/Constant.js"; 
 
-const BIN_ID = "689a1f61d0ea881f4056ccf5";
-const MASTER_KEY = "$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS";
+const BIN_ID = USERS_BIN_ID;
+const MASTER_KEY = X_MASTER_KEY;
 const API_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
 
 const AdminOngoingPage = () => {
@@ -75,12 +76,11 @@ const AdminOngoingPage = () => {
         return;
       }
 
-      // Remove from ongoing projects
       const updatedOngoing = currentUser["ongoing project"].filter(
         proj => proj["Project Name"] !== projectToComplete.name
       );
 
-      // Add to completed projects (with current date)
+      
       const completedProject = {
         "Project Name": projectToComplete.name,
         "Project Info": projectToComplete.info,
@@ -97,19 +97,19 @@ const AdminOngoingPage = () => {
         completedProject
       ];
 
-      // Update user data
+     
       const updatedUser = {
         ...currentUser,
         "ongoing project": updatedOngoing,
         "completed project": updatedCompleted
       };
 
-      // Update all users array
+     
       const updatedUsers = allUsers.map(user => 
         user.email === userEmail ? updatedUser : user
       );
 
-      // Send PUT request to update JSONBin
+      
       const updateResponse = await fetch(API_URL, {
         method: "PUT",
         headers: {
@@ -121,7 +121,7 @@ const AdminOngoingPage = () => {
 
       if (updateResponse.ok) {
         alert("Project marked as completed!");
-        fetchOngoingProjects(); // Refresh the list
+        fetchOngoingProjects(); 
       } else {
         throw new Error("Failed to update project");
       }

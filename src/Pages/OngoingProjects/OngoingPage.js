@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { X_MASTER_KEY, USERS_BIN_ID } from "D:/PMS/pms_react/pms/src/Utility/Constant.js"; 
 
-const BIN_ID = "689a1f61d0ea881f4056ccf5";
-const MASTER_KEY = "$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS";
+const BIN_ID = USERS_BIN_ID;
+const MASTER_KEY = X_MASTER_KEY;
 const API_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
 
 const OngoingPage = () => {

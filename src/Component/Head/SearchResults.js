@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom"; // Import Link
+import { Link } from "react-router-dom";
+import { X_MASTER_KEY, UPCOMING_BIN_ID } from "D:/PMS/pms_react/pms/src/Utility/Constant.js"; 
 
-const BIN_ID = "689a1f7e43b1c97be91be549";
-const MASTER_KEY = "$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS";
-const JSONBIN_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}/latest`; // fixed template string
+const BIN_ID = UPCOMING_BIN_ID;
+const MASTER_KEY = X_MASTER_KEY;
+const JSONBIN_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}/latest`; 
 
 function getQueryParam(name) {
   const params = new URLSearchParams(window.location.search);
@@ -29,7 +30,7 @@ const SearchResults = () => {
             "Content-Type": "application/json",
           },
         });
-        if (!res.ok) throw new Error(`Fetch failed: ${res.status} ${res.statusText}`); // fixed template string
+        if (!res.ok) throw new Error(`Fetch failed: ${res.status} ${res.statusText}`); 
         const data = await res.json();
         const record = data.record ?? data;
         const upcoming = record["upcoming project"] ?? [];

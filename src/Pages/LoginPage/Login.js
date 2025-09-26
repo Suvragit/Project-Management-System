@@ -1,6 +1,7 @@
 import OptiAssign from '../../Assets/OptiAssign.png'; 
 import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from 'react';
+import { X_MASTER_KEY,USERS_BIN_ID} from "D:/PMS/pms_react/pms/src/Utility/Constant.js";
 
 const Login = () => {
     const [loginType, setloginType] = useState('');
@@ -8,10 +9,10 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
-    const navigate = useNavigate();
+    const navigate = useNavigate();    
 
-    const JSONBIN_URL = 'https://api.jsonbin.io/v3/b/689a1f61d0ea881f4056ccf5';
-    const JSONBIN_KEY = '$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS';
+    const JSONBIN_URL = USERS_BIN_ID;
+    const JSONBIN_KEY = X_MASTER_KEY;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -25,8 +26,8 @@ const Login = () => {
         }
 
         try {
-            // Fetch data from JSONBin
-            const response = await fetch(JSONBIN_URL, {
+            
+            const response = await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_URL}`, {
                 headers: {
                     'X-Master-Key': JSONBIN_KEY
                 }
@@ -37,7 +38,7 @@ const Login = () => {
             const data = await response.json();
             const jsonData = data.record;
             
-            // Find the matched user
+            
             const matchedUser = jsonData.find(
                 (user) =>
                 user.role.toLowerCase() === loginType.toLowerCase() &&
@@ -109,7 +110,7 @@ const Login = () => {
                         {loading ? 'Logging in...' : 'Login'}
                     </button>
 
-                    {/* Sign Up link under login button */}
+                    
                     <Link 
                         to="/signup" 
                         className="text-blue-700 hover:underline mt-3"

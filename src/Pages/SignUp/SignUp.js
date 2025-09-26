@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import OptiAssign from '../../Assets/OptiAssign.png';
-
 import { useNavigate, Link } from "react-router-dom";
+import { X_MASTER_KEY, USERS_BIN_ID } from "D:/PMS/pms_react/pms/src/Utility/Constant.js"; 
 
 export default function SignUp() {
   const [formData, setFormData] = useState({
@@ -29,21 +29,21 @@ export default function SignUp() {
     }
 
     try {
-      // Fetch existing users from JSONBin
-      const res = await fetch("https://api.jsonbin.io/v3/b/689a1f61d0ea881f4056ccf5/latest", {
+    
+      const res = await fetch(`https://api.jsonbin.io/v3/b/${USERS_BIN_ID}/latest`, {
         headers: {
-          "X-Master-Key": "$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS",
+          "X-Master-Key": X_MASTER_KEY,
         },
       });
 
       const data = await res.json();
       const users = data.record;
 
-      // Generate new ID
+    
       const numericIds = users.filter(u => !isNaN(u.id)).map(u => u.id);
       const newId = numericIds.length ? Math.max(...numericIds) + 1 : 1;
 
-      // New user object
+     
       const newUser = {
         id: newId,
         email: formData.email,
@@ -60,7 +60,7 @@ export default function SignUp() {
         "completed project": []
       };
 
-      // Update JSONBin
+     
       const updatedUsers = [...users, newUser];
       await fetch("https://api.jsonbin.io/v3/b/689a1f61d0ea881f4056ccf5", {
         method: "PUT",
