@@ -10,17 +10,17 @@ const SidebarItems = () => {
     navigate(path);
   };
 
-  // menu items for admin
+  
   const adminMenu = [
     { name: "Home", path: "/home" },
     { name: "Projects Completed", path: "/completed" },
     { name: "Projects Ongoing", path: "/ongoingproject" },
+    { name: "Skillset", path: "/skillset" },
     { name: "Notice Board", path: "/notice" },
     { name: "Email Notification", path: "/notificationsadmin" },
     { name: "Contact us", path: "/contact" },
   ];
 
-  // menu items for employee
   const employeeMenu = [
     { name: "Home", path: "/home" },
     { name: "Projects Completed", path: "/completed" },

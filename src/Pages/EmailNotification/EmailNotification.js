@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
+import { X_MASTER_KEY, REQUESTS_BIN_ID} from "D:/PMS/pms_react/pms/src/Utility/Constant.js"; 
 
-const REQUESTS_BIN_ID = "68caf85a43b1c97be9465eed"; // Requests bin
-const MASTER_KEY =
-  "$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS";
+const BIN_ID = REQUESTS_BIN_ID; 
+const MASTER_KEY =X_MASTER_KEY;
 
 const EmailNotification = () => {
   const [requests, setRequests] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const userId = localStorage.getItem("userId"); // must be stored on login
+  const userId = localStorage.getItem("userId"); 
 
   useEffect(() => {
     const fetchRequests = async () => {
       if (!userId) return;
 
       try {
-        const res = await fetch(`https://api.jsonbin.io/v3/b/${REQUESTS_BIN_ID}`, {
+        const res = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`, {
           method: "GET",
           headers: { "X-Master-Key": MASTER_KEY },
         });
@@ -25,7 +25,7 @@ const EmailNotification = () => {
           ? data.record.requests
           : [];
 
-        // Only keep requests for the logged-in user & exclude pending
+        
         const userRequests = allRequests.filter(
           (req) =>
             req.userId === Number(userId) &&
@@ -45,7 +45,7 @@ const EmailNotification = () => {
 
   return (
     <div className="w-screen h-screen flex flex-col items-center justify-start p-6 pt-20">
-      {/* Added pt-20 to push content down from top */}
+      
 
       {loading ? (
         <p className="text-black">Loading...</p>

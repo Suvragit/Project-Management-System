@@ -1,5 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
+import { X_MASTER_KEY,USERS_BIN_ID} from "D:/PMS/pms_react/pms/src/Utility/Constant.js";
+
+const USER_BIN_ID = USERS_BIN_ID;  
+const MASTER_KEY = X_MASTER_KEY;
 
 const Cards = () => {
   const navigate = useNavigate();
@@ -15,7 +19,7 @@ const Cards = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        // Get the logged-in user's ID from localStorage
+        
         const userId = localStorage.getItem('userId');
         
         if (!userId) {
@@ -24,10 +28,10 @@ const Cards = () => {
           return;
         }
 
-        // Fetch data from JSONBin
-        const response = await fetch('https://api.jsonbin.io/v3/b/689a1f61d0ea881f4056ccf5', {
+      
+        const response = await fetch(`https://api.jsonbin.io/v3/b/${USER_BIN_ID}`, {
           headers: {
-            'X-Master-Key': '$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS'
+            'X-Master-Key': MASTER_KEY
           }
         });
         
@@ -36,23 +40,23 @@ const Cards = () => {
         const data = await response.json();
         const users = data.record;
         
-        // Find the current user by ID from localStorage
+        
         const currentUser = users.find(user => user.id.toString() === userId.toString());
         
         if (currentUser) {
-          // Calculate stats
+          
           const completedProjects = currentUser['completed project'] || [];
           const ongoingProjects = currentUser['ongoing project'] || [];
           
           const completedCount = completedProjects.length;
           const ongoingCount = ongoingProjects.length;
           
-          // Calculate total credits from completed projects
+          
           const totalCredits = completedProjects.reduce((sum, project) => {
             return sum + (project['Project Credit'] || 0);
           }, 0);
           
-          // Get bench days
+          
           const benchDays = parseInt(currentUser.bench) || 0;
           const daysLeft = 60 - benchDays;
           

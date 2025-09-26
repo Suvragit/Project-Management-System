@@ -5,7 +5,6 @@ import logo from "../../Assets/logo.png";
 const LandingPage = () => {
   return (
     <div className="relative w-screen h-screen overflow-hidden flex items-center justify-center px-4 text-gray-900">
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-pink-200 via-blue-100 to-green-200 animate-gradient-slow z-0" />
       <div className="absolute top-0 left-0 w-72 h-72 bg-orange-300 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse" />
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse" />

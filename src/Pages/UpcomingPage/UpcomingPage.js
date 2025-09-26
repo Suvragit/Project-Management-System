@@ -1,31 +1,30 @@
 import { useEffect, useState } from "react";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { FiUpload } from "react-icons/fi";
+import { X_MASTER_KEY, REQUESTS_BIN_ID,UPCOMING_BIN_ID,USERS_BIN_ID } from "D:/PMS/pms_react/pms/src/Utility/Constant.js"; 
 
-const UPCOMING_BIN_ID = "689a1f7e43b1c97be91be549"; // Upcoming projects bin
-const WISHLIST_BIN_ID = "689a1f61d0ea881f4056ccf5"; // Wishlist bin
-const REQUESTS_BIN_ID = "68caf85a43b1c97be9465eed"; // Requests bin
-const MASTER_KEY =
-  "$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS";
+const U_BIN_ID = UPCOMING_BIN_ID; 
+const WISHLIST_BIN_ID = USERS_BIN_ID; 
+const R_BIN_ID = REQUESTS_BIN_ID; 
+const MASTER_KEY =X_MASTER_KEY;
 
 const UpcomingPage = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [wishlist, setWishlist] = useState([]);
   const [appliedProjects, setAppliedProjects] = useState([]);
-  const [rejectedProjects, setRejectedProjects] = useState([]); // track rejected projects
-
+  const [rejectedProjects, setRejectedProjects] = useState([]); 
   const userEmail = localStorage.getItem("email");
   const username = localStorage.getItem("name");
-  const userId = localStorage.getItem("userId"); // must be stored on login
+  const userId = localStorage.getItem("userId"); 
 
-  // Fetch applied + rejected projects
+ 
   useEffect(() => {
     const fetchRequests = async () => {
       if (!userId) return;
 
       try {
-        const res = await fetch(`https://api.jsonbin.io/v3/b/${REQUESTS_BIN_ID}`, {
+        const res = await fetch(`https://api.jsonbin.io/v3/b/${R_BIN_ID}`, {
           method: "GET",
           headers: { "X-Master-Key": MASTER_KEY },
         });
@@ -55,11 +54,11 @@ const UpcomingPage = () => {
     fetchRequests();
   }, [userId]);
 
-  // Fetch upcoming projects
+  
   useEffect(() => {
     const fetchUpcoming = async () => {
       try {
-        const res = await fetch(`https://api.jsonbin.io/v3/b/${UPCOMING_BIN_ID}`, {
+        const res = await fetch(`https://api.jsonbin.io/v3/b/${U_BIN_ID}`, {
           method: "GET",
           headers: { "X-Master-Key": MASTER_KEY },
         });
@@ -77,7 +76,7 @@ const UpcomingPage = () => {
             credit: proj["Project credit"],
           }));
 
-          // 🔴 Remove rejected projects from the list
+         
           UpcomingProject = UpcomingProject.filter(
             (proj) => !rejectedProjects.includes(proj.name)
           );
@@ -92,9 +91,9 @@ const UpcomingPage = () => {
     };
 
     fetchUpcoming();
-  }, [rejectedProjects]); // refetch when rejected projects change
+  }, [rejectedProjects]); 
 
-  // Fetch wishlist
+  
   useEffect(() => {
     const fetchWishlist = async () => {
       if (!userEmail) return;
@@ -118,7 +117,7 @@ const UpcomingPage = () => {
     fetchWishlist();
   }, [userEmail]);
 
-  // Wishlist handler
+  
   const handleWishlist = async (project) => {
     if (!userEmail) {
       alert("User not logged in!");
@@ -168,7 +167,7 @@ const UpcomingPage = () => {
     }
   };
 
-  // Apply handler
+  
   const handleApply = async (project) => {
     if (!userEmail || !username || !userId) {
       alert("User not logged in!");
@@ -176,7 +175,7 @@ const UpcomingPage = () => {
     }
 
     try {
-      const res = await fetch(`https://api.jsonbin.io/v3/b/${REQUESTS_BIN_ID}`, {
+      const res = await fetch(`https://api.jsonbin.io/v3/b/${R_BIN_ID}`, {
         method: "GET",
         headers: { "X-Master-Key": MASTER_KEY },
       });
@@ -211,7 +210,7 @@ const UpcomingPage = () => {
 
       allRequests.push(newRequest);
 
-      await fetch(`https://api.jsonbin.io/v3/b/${REQUESTS_BIN_ID}`, {
+      await fetch(`https://api.jsonbin.io/v3/b/${R_BIN_ID}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

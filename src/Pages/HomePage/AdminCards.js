@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { FaBell, FaPlus } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { X_MASTER_KEY,USERS_BIN_ID,UPCOMING_BIN_ID, REQUESTS_BIN_ID} from "D:/PMS/pms_react/pms/src/Utility/Constant.js";
 
-const UPCOMING_BIN_ID = "689a1f7e43b1c97be91be549"; // upcoming project bin
-const USERS_BIN_ID = "689a1f61d0ea881f4056ccf5"; // users bin
-const REQUESTS_BIN_ID = "68caf85a43b1c97be9465eed"; // requests bin
-const MASTER_KEY = "$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS";
+const U_BIN_ID = UPCOMING_BIN_ID; 
+const USER_BIN_ID = USERS_BIN_ID; 
+const R_BIN_ID = REQUESTS_BIN_ID; 
+const MASTER_KEY = X_MASTER_KEY;
 
 const AdminCards = () => {
   const [projects, setProjects] = useState([]);
@@ -13,10 +14,10 @@ const AdminCards = () => {
   const [movingIndex, setMovingIndex] = useState(null);
   const navigate = useNavigate();
 
-  // existing 'name' value (coordinator username)
+  
   const username = localStorage.getItem("name");
 
-  // read stored user object (if any). Expected to be a JSON string with fields like id, username, name
+  
   let storedUserRaw = null;
   try {
     storedUserRaw = localStorage.getItem("user");
@@ -38,7 +39,7 @@ const AdminCards = () => {
       }
 
       try {
-        const res = await fetch(`https://api.jsonbin.io/v3/b/${UPCOMING_BIN_ID}`, {
+        const res = await fetch(`https://api.jsonbin.io/v3/b/${U_BIN_ID}`, {
           method: "GET",
           headers: { "X-Master-Key": MASTER_KEY },
         });
@@ -84,8 +85,7 @@ const AdminCards = () => {
     navigate("/requests");
   };
 
-  // Start project: remove from upcoming bin + add to ongoing project of accepted users
-  // Also add to coordinator (clicking user) and to stored "user" (from localStorage), avoiding duplicates
+  
   const handleStartProject = async (project, idx) => {
     if (!username) {
       alert("No username found in localStorage.");
@@ -94,13 +94,13 @@ const AdminCards = () => {
 
     setMovingIndex(idx);
 
-    // prepare stored-user matching keys
+    
     const storedUserId = storedUser?.id ?? storedUser?.userId ?? null;
     const storedUserUsername = storedUser?.username ?? storedUser?.name ?? null;
 
     try {
-      // 1) READ upcoming bin
-      const upRes = await fetch(`https://api.jsonbin.io/v3/b/${UPCOMING_BIN_ID}`, {
+      
+      const upRes = await fetch(`https://api.jsonbin.io/v3/b/${U_BIN_ID}`, {
         method: "GET",
         headers: { "X-Master-Key": MASTER_KEY },
       });
@@ -114,8 +114,8 @@ const AdminCards = () => {
 
       const targetName = (project.name || "").toString().trim().toLowerCase();
 
-      // 2) READ requests bin to collect accepted members for this project
-      const reqRes = await fetch(`https://api.jsonbin.io/v3/b/${REQUESTS_BIN_ID}`, {
+      
+      const reqRes = await fetch(`https://api.jsonbin.io/v3/b/${R_BIN_ID}`, {
         method: "GET",
         headers: { "X-Master-Key": MASTER_KEY },
       });
@@ -135,14 +135,14 @@ const AdminCards = () => {
         });
       }
 
-      // 3) Remove the project from upcoming array
+      
       upRecord["upcoming project"] = upRecord["upcoming project"].filter((p) => {
         const nameLower = ((p["Project name"] || "") + "").toString().trim().toLowerCase();
         return nameLower !== targetName;
       });
 
-      // PUT updated upcoming bin back
-      const putUpRes = await fetch(`https://api.jsonbin.io/v3/b/${UPCOMING_BIN_ID}`, {
+      
+      const putUpRes = await fetch(`https://api.jsonbin.io/v3/b/${U_BIN_ID}`, {
         method: "PUT",
         headers: {
           "X-Master-Key": MASTER_KEY,
@@ -152,8 +152,8 @@ const AdminCards = () => {
       });
       if (!putUpRes.ok) throw new Error("Failed to update upcoming bin");
 
-      // 4) READ users bin
-      const usersRes = await fetch(`https://api.jsonbin.io/v3/b/${USERS_BIN_ID}`, {
+      
+      const usersRes = await fetch(`https://api.jsonbin.io/v3/b/${USER_BIN_ID}`, {
         method: "GET",
         headers: { "X-Master-Key": MASTER_KEY },
       });
@@ -165,7 +165,7 @@ const AdminCards = () => {
         throw new Error("Users bin should be an array of user objects");
       }
 
-      // 5) Build ongoing project object
+      
       const ongoingObj = {
         "Project Name": project.name,
         "Project Info": project.info,
@@ -176,7 +176,7 @@ const AdminCards = () => {
         "Project Credit": project.credit,
       };
 
-      // 6) Append to accepted users
+      
       for (let i = 0; i < usersRecord.length; i++) {
         const user = usersRecord[i];
         if (!user) continue;
@@ -197,7 +197,7 @@ const AdminCards = () => {
         }
       }
 
-      // 7) ALSO ensure the clicking user (coordinator) gets the project in THEIR ongoing project
+      
       const coordinatorIndex = usersRecord.findIndex(
         (u) => u?.username === username || u?.name === username
       );
@@ -216,9 +216,9 @@ const AdminCards = () => {
         console.warn(`Coordinator "${username}" not found in users bin; skipped adding to their ongoing project.`);
       }
 
-      // 8) ALSO add to the stored user read from localStorage (if provided)
+     
       if (storedUser) {
-        // attempt to find that stored user in usersRecord by id first, then username/name
+        
         let storedIndex = -1;
         if (storedUserId !== null) {
           storedIndex = usersRecord.findIndex((u) => u?.id === storedUserId);
@@ -243,8 +243,8 @@ const AdminCards = () => {
         }
       }
 
-      // 9) PUT updated users bin back
-      const putUsersRes = await fetch(`https://api.jsonbin.io/v3/b/${USERS_BIN_ID}`, {
+      
+      const putUsersRes = await fetch(`https://api.jsonbin.io/v3/b/${USER_BIN_ID}`, {
         method: "PUT",
         headers: {
           "X-Master-Key": MASTER_KEY,
@@ -254,7 +254,7 @@ const AdminCards = () => {
       });
       if (!putUsersRes.ok) throw new Error("Failed to update users bin");
 
-      // 10) Update local UI state to remove project
+      
       setProjects((prev) => prev.filter((p) => ((p.name || "") + "").toString().trim().toLowerCase() !== targetName));
 
       alert(`Project "${project.name}" started.`);
@@ -268,7 +268,6 @@ const AdminCards = () => {
 
   return (
     <div className="w-full flex-1 bg-white overflow-y-auto p-6">
-      {/* Blue + Button */}
       <button
         onClick={handleAddProject}
         className="fixed bottom-6 right-6 bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-600 transition-colors z-10"

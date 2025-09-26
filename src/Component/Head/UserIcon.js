@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { X_MASTER_KEY, USERS_BIN_ID } from "D:/PMS/pms_react/pms/src/Utility/Constant.js"; 
 
-const BIN_ID = "689a1f61d0ea881f4056ccf5";
-const MASTER_KEY = "$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS";
+const BIN_ID = USERS_BIN_ID;
+const MASTER_KEY = X_MASTER_KEY;
 
 const UserIcon = () => {
   const [photo, setPhoto] = useState("");
@@ -26,7 +27,7 @@ const UserIcon = () => {
         if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
 
         const json = await res.json();
-        // JSON structure: the array is at json.record
+      
         const users = Array.isArray(json.record) ? json.record : [];
 
         const employee = users.find((u) => u.email === selectedEmail);
@@ -35,7 +36,7 @@ const UserIcon = () => {
           setPhoto(employee.image || "");
           setName(employee.name || "");
         } else {
-          // no matching user found
+          
           setPhoto("");
           setName("");
         }
@@ -51,7 +52,7 @@ const UserIcon = () => {
     fetchUser();
   }, []);
 
-  // derive initials for fallback
+  
   const initials = (nameStr) => {
     if (!nameStr) return "U";
     return nameStr
@@ -61,7 +62,7 @@ const UserIcon = () => {
       .join("");
   };
 
-  // on image error -> fallback to initials
+  
   const handleImgError = (e) => {
     e.currentTarget.style.display = "none";
     setPhoto("");

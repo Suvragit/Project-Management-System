@@ -5,7 +5,7 @@ const SearchBar = () => {
 
   const handleSearch = () => {
     const q = (inputRef.current?.value || "").trim();
-    const url = `/search?name=${encodeURIComponent(q)}`; // fixed template string
+    const url = `/search?name=${encodeURIComponent(q)}`;
     window.location.href = url;
   };
 
@@ -13,7 +13,7 @@ const SearchBar = () => {
     <div className="flex-1 flex items-center">
       <input
         type="text"
-        placeholder="Search"
+        placeholder="Upcoming Project Name"
         className="w-80 border border-black rounded-l-md p-1"
         ref={inputRef}
       />

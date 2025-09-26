@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { X_MASTER_KEY,USERS_BIN_ID } from "D:/PMS/pms_react/pms/src/Utility/Constant.js"; 
 
 const ViewSkill = () => {
+
+
   const [val, setVal] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  const BIN_ID = "689a1f61d0ea881f4056ccf5"; 
-  const MASTER_KEY = "$2a$10$s/5LWeaJ3ZnHZupGV3N.V.FQEuqtCPQeuUgpX9DePVQMEIo4WC5YS";
 
   useEffect(() => {
     const fetchSkills = async () => {
       try {
         const selectedEmail = localStorage.getItem("email");
 
-        const response = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
+        const response = await fetch(`https://api.jsonbin.io/v3/b/${USERS_BIN_ID}/latest`, {
           method: "GET",
           headers: {
-            "X-Master-Key": MASTER_KEY,
+            "X-Master-Key": X_MASTER_KEY,
           },
         });
 
@@ -25,7 +25,7 @@ const ViewSkill = () => {
         }
 
         const data = await response.json();
-        const employees = data.record; // ensure JSON structure matches
+        const employees = data.record;
 
         if (selectedEmail) {
           const employee = employees.find(emp => emp.email === selectedEmail);

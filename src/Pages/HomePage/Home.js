@@ -3,14 +3,13 @@ import InnerContainer from "./InnerContainer";
 import Cards from "./Cards";
 
 const Home = () => {
-  // Get the logged-in user's ID from your authentication system
-  // This could be from localStorage, context, or props
-  const loggedInUserId = localStorage.getItem('userId') || 1; // Default to 1 if not set
+  
+  const loggedInUserId = localStorage.getItem('userId') || 1; 
   
   return (
     <MainContainer>
       <InnerContainer>
-        <Cards userId={loggedInUserId} /> {/* Pass userId as prop */}
+        <Cards userId={loggedInUserId} />
       </InnerContainer>
     </MainContainer>
   );
